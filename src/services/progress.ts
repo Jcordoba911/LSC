@@ -34,8 +34,10 @@ export function createProgressService(storage: Storage = localStorage) {
     get(tema: string): ThemeProgress {
       return { ...emptyTheme(), ...read(storage)[tema] };
     },
-    isLearned(tema: string): boolean {
-      return this.get(tema).learned;
+    /** Aprendido solo si se marcó y además se vieron todas las palabras actuales del tema. */
+    isLearned(tema: string, wordIds: readonly string[]): boolean {
+      const p = this.get(tema);
+      return p.learned && wordIds.every((id) => p.seen.includes(id));
     },
     markSeen(tema: string, wordId: string): void {
       update(tema, (p) => {

@@ -24,7 +24,9 @@ export const gameIndexScreen: Screen = async (root) => {
 };
 
 export const gameScreen: Screen = async (root, { tema }) => {
-  if (!progress.isLearned(tema)) {
+  const words = await loadWords();
+  const themeWordIds = words.filter((w) => w.tema === tema).map((w) => w.id);
+  if (!progress.isLearned(tema, themeWordIds)) {
     root.append(
       h(
         'section',
@@ -37,7 +39,7 @@ export const gameScreen: Screen = async (root, { tema }) => {
     return;
   }
 
-  let state: GameState = createGame(tema, await loadWords());
+  let state: GameState = createGame(tema, words);
   if (state.rounds.length === 0) return navigate('/jugar');
 
   const hud = h('div', { class: 'hud' });

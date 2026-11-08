@@ -11,7 +11,8 @@ export function createThemeList(themes: Theme[]): HTMLElement {
     ...themes.map((theme) => {
       const p = progress.get(theme.id);
       const seen = theme.words.filter((w) => p.seen.includes(w.id)).length;
-      const playButton = p.learned
+      const learned = progress.isLearned(theme.id, theme.words.map((w) => w.id));
+      const playButton = learned
         ? h('a', { class: 'btn btn-primary', href: `#/jugar/${encodeURIComponent(theme.id)}` }, 'Jugar')
         : h(
             'button',
@@ -25,7 +26,7 @@ export function createThemeList(themes: Theme[]): HTMLElement {
         h(
           'p',
           { class: 'muted' },
-          p.learned ? '✔ Aprendido' : `${seen}/${theme.words.length} señas vistas`,
+          learned ? '✔ Aprendido' : `${seen}/${theme.words.length} señas vistas`,
           p.bestScore > 0 ? ` · Mejor puntaje: ${p.bestScore}` : '',
         ),
         h(
