@@ -1,0 +1,26 @@
+[
+  {
+    "id": "animales-perro",
+    "tema": "animales",
+    "leccion": 1,
+    "espanol": "perro",
+    "sign": "assets/signs/perro.png",
+    "figure": "assets/figures/perro.png"
+  },
+  {
+    "id": "animales-gato",
+    "tema": "animales",
+    "leccion": 1,
+    "espanol": "gato",
+    "sign": "assets/signs/gato.png",
+    "figure": "assets/figures/gato.png"
+  },
+  {
+    "id": "animales-pajaro",
+    "tema": "animales",
+    "leccion": 1,
+    "espanol": "pájaro",
+    "sign": "assets/signs/pajaro.webp",
+    "figure": "assets/figures/pajaro.webp"
+  }
+]
