@@ -26,7 +26,12 @@ export function createRouter(root: HTMLElement, routes: Record<string, Screen>, 
       route.keys.forEach((key, i) => (params[key] = decodeURIComponent(match[i + 1])));
       root.replaceChildren();
       window.scrollTo(0, 0);
-      await route.screen(root, params);
+      try {
+        await route.screen(root, params);
+      } catch (err) {
+        console.error(err);
+        root.replaceChildren(errorView());
+      }
       return;
     }
     navigate(fallback);
@@ -34,6 +39,26 @@ export function createRouter(root: HTMLElement, routes: Record<string, Screen>, 
 
   window.addEventListener('hashchange', resolve);
   return { start: resolve };
+}
+
+function errorView(): HTMLElement {
+  const section = document.createElement('section');
+  section.className = 'screen center';
+  const title = document.createElement('h2');
+  title.textContent = 'No se pudo cargar el contenido';
+  const retry = document.createElement('button');
+  retry.className = 'btn btn-primary';
+  retry.textContent = 'Reintentar';
+  retry.addEventListener('click', () => window.dispatchEvent(new HashChangeEvent('hashchange')));
+  const home = document.createElement('a');
+  home.className = 'btn';
+  home.href = '#/';
+  home.textContent = 'Menú';
+  const actions = document.createElement('div');
+  actions.className = 'actions center';
+  actions.append(retry, home);
+  section.append(title, actions);
+  return section;
 }
 
 export function navigate(path: string): void {
