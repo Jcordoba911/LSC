@@ -1,0 +1,402 @@
+[
+  {
+    "id": "perro",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "perro",
+    "sign": "assets/signs/perro.png",
+    "figure": null
+  },
+  {
+    "id": "gato",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "gato",
+    "sign": "assets/signs/gato.png",
+    "figure": null
+  },
+  {
+    "id": "caballo",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "caballo",
+    "sign": "assets/signs/caballo.png",
+    "figure": null
+  },
+  {
+    "id": "pez",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "pez",
+    "sign": "assets/signs/pez.png",
+    "figure": null
+  },
+  {
+    "id": "pato",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "pato",
+    "sign": "assets/signs/pato.png",
+    "figure": null
+  },
+  {
+    "id": "gallina",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "gallina",
+    "sign": "assets/signs/gallina.png",
+    "figure": null
+  },
+  {
+    "id": "oso",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "oso",
+    "sign": "assets/signs/oso.png",
+    "figure": null
+  },
+  {
+    "id": "conejo",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "conejo",
+    "sign": "assets/signs/conejo.png",
+    "figure": null
+  },
+  {
+    "id": "elefante",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "elefante",
+    "sign": "assets/signs/elefante.png",
+    "figure": null
+  },
+  {
+    "id": "tortuga",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "tortuga",
+    "sign": "assets/signs/tortuga.png",
+    "figure": null
+  },
+  {
+    "id": "mariposa",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "mariposa",
+    "sign": "assets/signs/mariposa.png",
+    "figure": null
+  },
+  {
+    "id": "raton",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "ratón",
+    "sign": "assets/signs/raton.png",
+    "figure": null
+  },
+  {
+    "id": "pajaro",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "pájaro",
+    "sign": "assets/signs/pajaro.png",
+    "figure": null
+  },
+  {
+    "id": "cabra",
+    "tema": "animales",
+    "leccion": 10,
+    "espanol": "cabra",
+    "sign": "assets/signs/cabra.png",
+    "figure": null
+  },
+  {
+    "id": "arroz",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "arroz",
+    "sign": "assets/signs/arroz.png",
+    "figure": null
+  },
+  {
+    "id": "arepa",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "arepa",
+    "sign": "assets/signs/arepa.png",
+    "figure": null
+  },
+  {
+    "id": "banano",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "banano",
+    "sign": "assets/signs/banano.png",
+    "figure": null
+  },
+  {
+    "id": "carne",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "carne",
+    "sign": "assets/signs/carne.png",
+    "figure": null
+  },
+  {
+    "id": "leche",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "leche",
+    "sign": "assets/signs/leche.png",
+    "figure": null
+  },
+  {
+    "id": "pan",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "pan",
+    "sign": "assets/signs/pan.png",
+    "figure": null
+  },
+  {
+    "id": "huevo",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "huevo",
+    "sign": "assets/signs/huevo.png",
+    "figure": null
+  },
+  {
+    "id": "jugo",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "jugo",
+    "sign": "assets/signs/jugo.png",
+    "figure": null
+  },
+  {
+    "id": "sopa",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "sopa",
+    "sign": "assets/signs/sopa.png",
+    "figure": null
+  },
+  {
+    "id": "pollo",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "pollo",
+    "sign": "assets/signs/pollo.png",
+    "figure": null
+  },
+  {
+    "id": "helado",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "helado",
+    "sign": "assets/signs/helado.png",
+    "figure": null
+  },
+  {
+    "id": "pizza",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "pizza",
+    "sign": "assets/signs/pizza.png",
+    "figure": null
+  },
+  {
+    "id": "zanahoria",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "zanahoria",
+    "sign": "assets/signs/zanahoria.png",
+    "figure": null
+  },
+  {
+    "id": "galleta",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "galleta",
+    "sign": "assets/signs/galleta.png",
+    "figure": null
+  },
+  {
+    "id": "chocolate",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "chocolate",
+    "sign": "assets/signs/chocolate.png",
+    "figure": null
+  },
+  {
+    "id": "camisa",
+    "tema": "prendas",
+    "leccion": 11,
+    "espanol": "camisa",
+    "sign": "assets/signs/camisa.png",
+    "figure": null
+  },
+  {
+    "id": "pantalon",
+    "tema": "prendas",
+    "leccion": 11,
+    "espanol": "pantalón",
+    "sign": "assets/signs/pantalon.png",
+    "figure": null
+  },
+  {
+    "id": "zapatos",
+    "tema": "prendas",
+    "leccion": 11,
+    "espanol": "zapatos",
+    "sign": "assets/signs/zapatos.png",
+    "figure": null
+  },
+  {
+    "id": "falda",
+    "tema": "prendas",
+    "leccion": 11,
+    "espanol": "falda",
+    "sign": "assets/signs/falda.png",
+    "figure": null
+  },
+  {
+    "id": "vestido",
+    "tema": "prendas",
+    "leccion": 11,
+    "espanol": "vestido",
+    "sign": "assets/signs/vestido.png",
+    "figure": null
+  },
+  {
+    "id": "sombrero",
+    "tema": "prendas",
+    "leccion": 11,
+    "espanol": "sombrero",
+    "sign": "assets/signs/sombrero.png",
+    "figure": null
+  },
+  {
+    "id": "medias",
+    "tema": "prendas",
+    "leccion": 11,
+    "espanol": "medias",
+    "sign": "assets/signs/medias.png",
+    "figure": null
+  },
+  {
+    "id": "blusa",
+    "tema": "prendas",
+    "leccion": 11,
+    "espanol": "blusa",
+    "sign": "assets/signs/blusa.png",
+    "figure": null
+  },
+  {
+    "id": "corbata",
+    "tema": "prendas",
+    "leccion": 11,
+    "espanol": "corbata",
+    "sign": "assets/signs/corbata.png",
+    "figure": null
+  },
+  {
+    "id": "saco",
+    "tema": "prendas",
+    "leccion": 11,
+    "espanol": "saco",
+    "sign": "assets/signs/saco.png",
+    "figure": null
+  },
+  {
+    "id": "amarillo",
+    "tema": "colores",
+    "leccion": 11,
+    "espanol": "amarillo",
+    "sign": "assets/signs/amarillo.png",
+    "figure": null
+  },
+  {
+    "id": "azul",
+    "tema": "colores",
+    "leccion": 11,
+    "espanol": "azul",
+    "sign": "assets/signs/azul.png",
+    "figure": null
+  },
+  {
+    "id": "rojo",
+    "tema": "colores",
+    "leccion": 11,
+    "espanol": "rojo",
+    "sign": "assets/signs/rojo.png",
+    "figure": null
+  },
+  {
+    "id": "verde",
+    "tema": "colores",
+    "leccion": 11,
+    "espanol": "verde",
+    "sign": "assets/signs/verde.png",
+    "figure": null
+  },
+  {
+    "id": "negro",
+    "tema": "colores",
+    "leccion": 11,
+    "espanol": "negro",
+    "sign": "assets/signs/negro.png",
+    "figure": null
+  },
+  {
+    "id": "morado",
+    "tema": "colores",
+    "leccion": 11,
+    "espanol": "morado",
+    "sign": "assets/signs/morado.png",
+    "figure": null
+  },
+  {
+    "id": "gris",
+    "tema": "colores",
+    "leccion": 11,
+    "espanol": "gris",
+    "sign": "assets/signs/gris.png",
+    "figure": null
+  },
+  {
+    "id": "cafe",
+    "tema": "colores",
+    "leccion": 11,
+    "espanol": "café",
+    "sign": "assets/signs/cafe.png",
+    "figure": null
+  },
+  {
+    "id": "naranja",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "naranja",
+    "sign": "assets/signs/naranja.png",
+    "figure": null
+  },
+  {
+    "id": "caliente",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "caliente",
+    "sign": "assets/signs/caliente.png",
+    "figure": null
+  },
+  {
+    "id": "hambre",
+    "tema": "alimentos",
+    "leccion": 9,
+    "espanol": "hambre",
+    "sign": "assets/signs/hambre.png",
+    "figure": null
+  }
+]
