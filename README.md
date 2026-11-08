@@ -48,22 +48,20 @@ Cada entrada de `public/data/words.json` tiene este esquema (rutas relativas a `
 
 ```json
 {
-  "id": "animales-perro",
+  "id": "perro",
   "tema": "animales",
   "leccion": 1,
   "espanol": "perro",
   "sign": "assets/signs/perro.png",
-  "figure": "assets/figures/perro.png"
+  "figure": null
 }
 ```
 
 - `sign`: `.png`/`.webp` sin texto encima, idealmente con flechas de movimiento como en el libro de LSC.
   Si la extensión es `.mp4`/`.webm` se muestra como video automáticamente.
-- `figure`: dibujo de apoyo (opcional).
+- `figure`: ruta a un dibujo de apoyo en `assets/figures/`, o `null` si no hay.
 
 Después de editar, ejecuta `npm run validate`. CI también lo ejecuta en cada PR y antes de desplegar.
-
-> Las imágenes incluidas son marcadores de posición; reemplázalas por señas reales.
 
 ## Despliegue
 

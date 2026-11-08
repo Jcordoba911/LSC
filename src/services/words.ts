@@ -25,10 +25,9 @@ export function groupByTheme(words: Word[]): Theme[] {
     list.push(word);
     themes.set(word.tema, list);
   }
-  return [...themes].map(([id, list]) => ({
-    id,
-    words: list.sort((a, b) => a.leccion - b.leccion),
-  }));
+  return [...themes]
+    .map(([id, list]) => ({ id, words: list.sort((a, b) => a.leccion - b.leccion) }))
+    .sort((a, b) => a.words[0].leccion - b.words[0].leccion);
 }
 
 export async function loadThemes(): Promise<Theme[]> {

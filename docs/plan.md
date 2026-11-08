@@ -24,11 +24,11 @@ y luego las **practique** en minijuegos, con su progreso guardado en el navegado
 - Señas en `public/assets/signs/` (`.png`/`.webp`, sin texto, con flechas de movimiento como en el libro de LSC).
   El componente de seña usa `<video>` si la extensión es `.mp4`/`.webm`, para migrar a video sin tocar la lógica.
 - Dibujos de apoyo en `public/assets/figures/`.
-- Las imágenes actuales son **marcadores de posición** y deben reemplazarse por señas reales validadas.
+- Vocabulario inicial: 50 señas en 4 temas (alimentos, animales, prendas, colores), lecciones 9–11 del libro.
 
 ## Próximos pasos
 
-1. Reemplazar imágenes de ejemplo por señas reales y ampliar el vocabulario por temas/lecciones.
+1. Ampliar el vocabulario por temas/lecciones y agregar dibujos de apoyo (`figure`).
 2. Nuevos modos de juego: palabra a seña, memoria (parejas), contrarreloj.
 3. Accesibilidad: navegación por teclado, alto contraste, lectura en voz.
 4. Validación de contenido con personas sordas / intérpretes de LSC.
