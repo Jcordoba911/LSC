@@ -80,9 +80,8 @@ BASE_PATH=/LSC/ npm run build && BASE_PATH=/LSC/ npm run preview
 
 ## Créditos
 
-Equipo:
+Desarrollo:
 
 - Joseph Córdoba ([@Jcordoba911](https://github.com/Jcordoba911))
-- _(agregar integrantes del equipo)_
 
-Las señas de referencia se basan en el libro de LSC utilizado por el equipo.
+Las imágenes de las señas provienen del libro de LSC.
