@@ -11,6 +11,9 @@ export function loadWords(): Promise<Word[]> {
   cache ??= fetch(assetUrl('data/words.json')).then((res) => {
     if (!res.ok) throw new Error(`No se pudo cargar words.json (${res.status})`);
     return res.json() as Promise<Word[]>;
+  }).catch((err: unknown) => {
+    cache = null;
+    throw err;
   });
   return cache;
 }
