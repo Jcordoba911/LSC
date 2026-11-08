@@ -61,6 +61,12 @@ describe('answer', () => {
     expect(currentRound(game)).toBeUndefined();
   });
 
+  it('usa los puntos por acierto configurados', () => {
+    let game = createGame('animales', words, { pointsPerHit: 25 });
+    ({ state: game } = answer(game, currentRound(game)!.word.espanol));
+    expect(game.score).toBe(25);
+  });
+
   it('termina al completar todas las rondas', () => {
     let game = createGame('animales', words);
     while (!game.finished) ({ state: game } = answer(game, currentRound(game)!.word.espanol));

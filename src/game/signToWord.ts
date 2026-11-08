@@ -12,6 +12,7 @@ export interface GameState {
   score: number;
   lives: number;
   correct: number;
+  pointsPerHit: number;
   finished: boolean;
 }
 
@@ -41,7 +42,12 @@ export function shuffle<T>(items: readonly T[], rng: () => number = Math.random)
 export function createGame(
   tema: string,
   allWords: readonly Word[],
-  { lives = DEFAULTS.lives, optionsPerRound = DEFAULTS.optionsPerRound, rng = Math.random }: GameOptions = {},
+  {
+    lives = DEFAULTS.lives,
+    optionsPerRound = DEFAULTS.optionsPerRound,
+    pointsPerHit = DEFAULTS.pointsPerHit,
+    rng = Math.random,
+  }: GameOptions = {},
 ): GameState {
   const themeWords = allWords.filter((w) => w.tema === tema);
   const others = allWords.filter((w) => w.tema !== tema);
@@ -55,18 +61,14 @@ export function createGame(
     return { word, options: shuffle([word.espanol, ...distractors], rng) };
   });
 
-  return { tema, rounds, index: 0, score: 0, lives, correct: 0, finished: rounds.length === 0 };
+  return { tema, rounds, index: 0, score: 0, lives, correct: 0, pointsPerHit, finished: rounds.length === 0 };
 }
 
 export function currentRound(state: GameState): Round | undefined {
   return state.finished ? undefined : state.rounds[state.index];
 }
 
-export function answer(
-  state: GameState,
-  option: string,
-  pointsPerHit = DEFAULTS.pointsPerHit,
-): { state: GameState; isCorrect: boolean } {
+export function answer(state: GameState, option: string): { state: GameState; isCorrect: boolean } {
   const round = currentRound(state);
   if (!round) return { state, isCorrect: false };
 
@@ -79,7 +81,7 @@ export function answer(
       ...state,
       index,
       lives,
-      score: state.score + (isCorrect ? pointsPerHit : 0),
+      score: state.score + (isCorrect ? state.pointsPerHit : 0),
       correct: state.correct + (isCorrect ? 1 : 0),
       finished: lives <= 0 || index >= state.rounds.length,
     },
