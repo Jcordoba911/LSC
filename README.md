@@ -82,6 +82,8 @@ Cada entrada de `public/data/words.json` tiene este esquema (rutas relativas a `
   (no en zip): GitHub Pages sirve cada archivo estático por separado. Recomendado: `.mp4` (H.264) cuadrado,
   sin audio y de pocos segundos; los videos se reproducen con `loop`, `muted`, `autoplay` y `playsinline`
   (necesarios para el autoplay en móviles).
+- `leccion`: número de lección del libro, o una etiqueta de texto (p. ej. `"vocabulario"`) si la seña no pertenece
+  a una lección numerada. Los temas se ordenan por lección; los etiquetados van al final.
 - `figure`: ruta a un dibujo de apoyo en `assets/figures/`, o `null` si no hay.
 
 ## Agregar frases

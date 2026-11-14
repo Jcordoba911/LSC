@@ -53,8 +53,11 @@ words.forEach((word, i) => {
       errors.push(`${where}: "${key}" debe ser un texto no vacío`);
     }
   }
-  if (!Number.isInteger(word.leccion) || word.leccion < 1) {
-    errors.push(`${where}: "leccion" debe ser un entero >= 1`);
+  const lessonOk =
+    (Number.isInteger(word.leccion) && word.leccion >= 1) ||
+    (typeof word.leccion === 'string' && word.leccion.trim() !== '');
+  if (!lessonOk) {
+    errors.push(`${where}: "leccion" debe ser un entero >= 1 o una etiqueta de texto`);
   }
   if (ids.has(word.id)) errors.push(`${where}: id duplicado`);
   ids.add(word.id);

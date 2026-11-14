@@ -2,7 +2,8 @@
 export interface Word {
   id: string;
   tema: string;
-  leccion: number;
+  /** Número de lección o etiqueta (p. ej. "vocabulario"). */
+  leccion: number | string;
   espanol: string;
   sign: string;
   /** Video/GIF de la seña (.webm/.mp4/.gif). Solo estas palabras participan en "Construye la frase". */
