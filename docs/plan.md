@@ -28,7 +28,7 @@ y luego las **practique** en minijuegos, con su progreso guardado en el navegado
 - Señas en `public/assets/signs/` (`.png`/`.webp`, sin texto, con flechas de movimiento como en el libro de LSC).
   El componente de seña usa `<video>` si la extensión es `.mp4`/`.webm`, para migrar a video sin tocar la lógica.
 - Dibujos de apoyo en `public/assets/figures/`.
-- Vocabulario inicial: 50 señas en 4 temas (alimentos, animales, prendas, colores), lecciones 9–11 del libro.
+- Vocabulario: 74 señas en 7 temas (alimentos, animales, prendas, colores, pronombres, verbos, cortesía).
 
 ## Próximos pasos
 
