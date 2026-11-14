@@ -5,6 +5,7 @@
     "leccion": 10,
     "espanol": "perro",
     "sign": "assets/signs/perro.png",
+    "signAnimated": "assets/signs/animated/perro.mp4",
     "figure": null
   },
   {
@@ -13,6 +14,7 @@
     "leccion": 10,
     "espanol": "gato",
     "sign": "assets/signs/gato.png",
+    "signAnimated": "assets/signs/animated/gato.mp4",
     "figure": null
   },
   {
@@ -101,6 +103,7 @@
     "leccion": 10,
     "espanol": "pájaro",
     "sign": "assets/signs/pajaro.png",
+    "signAnimated": "assets/signs/animated/pajaro.mp4",
     "figure": null
   },
   {
@@ -117,6 +120,7 @@
     "leccion": 9,
     "espanol": "arroz",
     "sign": "assets/signs/arroz.png",
+    "signAnimated": "assets/signs/animated/arroz.mp4",
     "figure": null
   },
   {
@@ -181,6 +185,7 @@
     "leccion": 9,
     "espanol": "sopa",
     "sign": "assets/signs/sopa.png",
+    "signAnimated": "assets/signs/animated/sopa.mp4",
     "figure": null
   },
   {
@@ -189,6 +194,7 @@
     "leccion": 9,
     "espanol": "pollo",
     "sign": "assets/signs/pollo.png",
+    "signAnimated": "assets/signs/animated/pollo.mp4",
     "figure": null
   },
   {
@@ -229,6 +235,7 @@
     "leccion": 9,
     "espanol": "chocolate",
     "sign": "assets/signs/chocolate.png",
+    "signAnimated": "assets/signs/animated/chocolate.mp4",
     "figure": null
   },
   {
@@ -237,6 +244,7 @@
     "leccion": 11,
     "espanol": "camisa",
     "sign": "assets/signs/camisa.png",
+    "signAnimated": "assets/signs/animated/camisa.mp4",
     "figure": null
   },
   {
@@ -245,6 +253,7 @@
     "leccion": 11,
     "espanol": "pantalón",
     "sign": "assets/signs/pantalon.png",
+    "signAnimated": "assets/signs/animated/pantalon.mp4",
     "figure": null
   },
   {
@@ -253,6 +262,7 @@
     "leccion": 11,
     "espanol": "zapatos",
     "sign": "assets/signs/zapatos.png",
+    "signAnimated": "assets/signs/animated/zapatos.mp4",
     "figure": null
   },
   {
@@ -269,6 +279,7 @@
     "leccion": 11,
     "espanol": "vestido",
     "sign": "assets/signs/vestido.png",
+    "signAnimated": "assets/signs/animated/vestido.mp4",
     "figure": null
   },
   {
@@ -325,6 +336,7 @@
     "leccion": 11,
     "espanol": "azul",
     "sign": "assets/signs/azul.png",
+    "signAnimated": "assets/signs/animated/azul.mp4",
     "figure": null
   },
   {
@@ -333,6 +345,7 @@
     "leccion": 11,
     "espanol": "rojo",
     "sign": "assets/signs/rojo.png",
+    "signAnimated": "assets/signs/animated/rojo.mp4",
     "figure": null
   },
   {
@@ -349,6 +362,7 @@
     "leccion": 11,
     "espanol": "negro",
     "sign": "assets/signs/negro.png",
+    "signAnimated": "assets/signs/animated/negro.mp4",
     "figure": null
   },
   {
@@ -365,6 +379,7 @@
     "leccion": 11,
     "espanol": "gris",
     "sign": "assets/signs/gris.png",
+    "signAnimated": "assets/signs/animated/gris.mp4",
     "figure": null
   },
   {
@@ -373,6 +388,7 @@
     "leccion": 11,
     "espanol": "café",
     "sign": "assets/signs/cafe.png",
+    "signAnimated": "assets/signs/animated/cafe.mp4",
     "figure": null
   },
   {
@@ -389,6 +405,7 @@
     "leccion": 9,
     "espanol": "caliente",
     "sign": "assets/signs/caliente.png",
+    "signAnimated": "assets/signs/animated/caliente.mp4",
     "figure": null
   },
   {

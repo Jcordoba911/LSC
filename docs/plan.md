@@ -9,18 +9,22 @@ y luego las **practique** en minijuegos, con su progreso guardado en el navegado
 
 ## Alcance del MVP
 
-- Menú principal con navegación por hash (`#/`, `#/aprende`, `#/jugar`, `#/resultados`).
+- Menú principal con navegación por hash (`#/`, `#/aprende`, `#/jugar`, `#/frases`, `#/resultados`).
 - Pantalla **Aprende**: tarjetas por tema (seña + dibujo de apoyo + palabra en español).
   Al revisar todas las tarjetas se habilita "Terminé de aprender".
 - El botón **Jugar** de cada tema permanece bloqueado hasta completar su Aprende
   (estado en `localStorage`, clave `lsc-progress-v1`).
 - Modo de juego **seña a palabra**: se muestra una seña y se elige la palabra correcta.
   10 puntos por acierto, 3 vidas, una ronda por palabra del tema.
+- Modo **Construye la frase** (`#/frases`): se reproduce en secuencia la seña animada de cada palabra
+  de una frase de `sentences.json` y se ordenan las palabras (o se elige el significado entre opciones).
+  10 puntos por palabra (la mitad si se reintenta), 3 vidas.
 - Pantalla de **resultados** con puntaje, aciertos y récord por tema.
 
 ## Contenido
 
-- Vocabulario en `public/data/words.json` (`id`, `tema`, `leccion`, `espanol`, `sign`, `figure`).
+- Vocabulario en `public/data/words.json` (`id`, `tema`, `leccion`, `espanol`, `sign`, `signAnimated`, `figure`).
+- Frases en `public/data/sentences.json` (`id`, `tema`, `leccion`, `palabras`, `frase`); señas animadas en `public/assets/signs/animated/`.
 - Señas en `public/assets/signs/` (`.png`/`.webp`, sin texto, con flechas de movimiento como en el libro de LSC).
   El componente de seña usa `<video>` si la extensión es `.mp4`/`.webm`, para migrar a video sin tocar la lógica.
 - Dibujos de apoyo en `public/assets/figures/`.

@@ -13,7 +13,8 @@ export const menuScreen: Screen = (root) => {
         'nav',
         { class: 'menu-buttons' },
         h('a', { class: 'btn btn-primary btn-lg', href: '#/aprende' }, 'Aprende'),
-        h('a', { class: 'btn btn-lg', href: '#/jugar' }, 'Jugar'),
+        h('a', { class: 'btn btn-lg', href: '#/jugar' }, 'Jugar: seña a palabra'),
+        h('a', { class: 'btn btn-lg', href: '#/frases' }, 'Construye la frase'),
       ),
       h(
         'button',
