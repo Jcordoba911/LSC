@@ -157,7 +157,9 @@ export const sentenceGameScreen: Screen = async (root, { tema, variante }) => {
         class: 'btn btn-link',
         type: 'button',
         onclick: () => {
-          const frase = currentSentence(state)!.sentence.frase;
+          const round = currentSentence(state);
+          if (!round) return;
+          const frase = round.sentence.frase;
           state = skipSentence(state);
           lockInputs();
           actions.replaceChildren();
@@ -247,6 +249,7 @@ export const sentenceGameScreen: Screen = async (root, { tema, variante }) => {
         setFeedback(`¡Correcto! «${round.sentence.frase}»`, 'ok');
         later(next);
       } else if (state.finished) {
+        actions.replaceChildren();
         setFeedback(`Sin vidas. La frase era: «${round.sentence.frase}»`, 'bad');
         later(finish);
       } else {
@@ -301,6 +304,7 @@ export const sentenceGameScreen: Screen = async (root, { tema, variante }) => {
                 button.disabled = true;
                 if (state.finished) {
                   lockInputs();
+                  actions.replaceChildren();
                   setFeedback(`Sin vidas. La frase era: «${round.sentence.frase}»`, 'bad');
                   later(finish);
                 } else {
