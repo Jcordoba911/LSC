@@ -3,7 +3,7 @@ import { createThemeList } from '../components/themeList';
 import { h } from '../dom';
 import { navigate, type Screen } from '../router';
 import { progress } from '../services/progress';
-import { assetUrl, loadThemes, themeLabel } from '../services/words';
+import { assetUrl, lessonLabel, loadThemes, themeLabel } from '../services/words';
 import type { Word } from '../types';
 
 export const learnIndexScreen: Screen = async (root) => {
@@ -29,7 +29,7 @@ function wordCard(word: Word): HTMLElement {
       ? h('img', { class: 'figure', src: assetUrl(word.figure), alt: `Dibujo de ${word.espanol}` })
       : null,
     h('h3', { class: 'word' }, word.espanol),
-    h('p', { class: 'muted' }, `Lección ${word.leccion}`),
+    h('p', { class: 'muted' }, lessonLabel(word.leccion)),
   );
 }
 

@@ -8,17 +8,21 @@ export function isVideo(path: string): boolean {
 }
 
 /**
- * Renderiza la seña como <img> o <video> según la extensión del archivo,
- * así se puede migrar de imágenes a videos cambiando solo words.json.
+ * Renderiza la seña como <img> (png/webp/gif...) o <video> según la extensión.
+ * Los videos van con loop, muted, autoplay y playsinline: sin muted +
+ * playsinline los navegadores móviles no reproducen automáticamente.
  */
-export function createSignMedia(path: string, alt: string): HTMLElement {
+export function createSignMedia(path: string, alt: string): HTMLImageElement | HTMLVideoElement {
   if (isVideo(path)) {
     const video = document.createElement('video');
-    video.src = assetUrl(path);
-    video.autoplay = true;
-    video.loop = true;
     video.muted = true;
+    video.defaultMuted = true;
+    video.loop = true;
+    video.autoplay = true;
     video.playsInline = true;
+    for (const attr of ['muted', 'loop', 'autoplay', 'playsinline']) video.setAttribute(attr, '');
+    video.preload = 'auto';
+    video.src = assetUrl(path);
     video.setAttribute('aria-label', alt);
     video.className = 'sign-media';
     return video;

@@ -26,8 +26,22 @@ export function groupByTheme(words: Word[]): Theme[] {
     themes.set(word.tema, list);
   }
   return [...themes]
-    .map(([id, list]) => ({ id, words: list.sort((a, b) => a.leccion - b.leccion) }))
-    .sort((a, b) => a.words[0].leccion - b.words[0].leccion);
+    .map(([id, list]) => ({ id, words: list.sort(byLesson) }))
+    .sort((a, b) => byLesson(a.words[0], b.words[0]));
+}
+
+/** Lecciones numéricas en orden; las etiquetadas (p. ej. "vocabulario") al final. */
+function byLesson(a: Word, b: Word): number {
+  const x = a.leccion;
+  const y = b.leccion;
+  if (typeof x === 'number' && typeof y === 'number') return x - y;
+  if (typeof x === 'number') return -1;
+  if (typeof y === 'number') return 1;
+  return x.localeCompare(y, 'es');
+}
+
+export function lessonLabel(leccion: Word['leccion']): string {
+  return typeof leccion === 'number' ? `Lección ${leccion}` : themeLabel(leccion);
 }
 
 export async function loadThemes(): Promise<Theme[]> {

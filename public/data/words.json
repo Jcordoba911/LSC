@@ -5,6 +5,7 @@
     "leccion": 10,
     "espanol": "perro",
     "sign": "assets/signs/perro.png",
+    "signAnimated": "assets/signs/animated/perro.mp4",
     "figure": null
   },
   {
@@ -13,6 +14,7 @@
     "leccion": 10,
     "espanol": "gato",
     "sign": "assets/signs/gato.png",
+    "signAnimated": "assets/signs/animated/gato.mp4",
     "figure": null
   },
   {
@@ -101,6 +103,7 @@
     "leccion": 10,
     "espanol": "pájaro",
     "sign": "assets/signs/pajaro.png",
+    "signAnimated": "assets/signs/animated/pajaro.mp4",
     "figure": null
   },
   {
@@ -117,6 +120,7 @@
     "leccion": 9,
     "espanol": "arroz",
     "sign": "assets/signs/arroz.png",
+    "signAnimated": "assets/signs/animated/arroz.mp4",
     "figure": null
   },
   {
@@ -181,6 +185,7 @@
     "leccion": 9,
     "espanol": "sopa",
     "sign": "assets/signs/sopa.png",
+    "signAnimated": "assets/signs/animated/sopa.mp4",
     "figure": null
   },
   {
@@ -189,6 +194,7 @@
     "leccion": 9,
     "espanol": "pollo",
     "sign": "assets/signs/pollo.png",
+    "signAnimated": "assets/signs/animated/pollo.mp4",
     "figure": null
   },
   {
@@ -229,6 +235,7 @@
     "leccion": 9,
     "espanol": "chocolate",
     "sign": "assets/signs/chocolate.png",
+    "signAnimated": "assets/signs/animated/chocolate.mp4",
     "figure": null
   },
   {
@@ -237,6 +244,7 @@
     "leccion": 11,
     "espanol": "camisa",
     "sign": "assets/signs/camisa.png",
+    "signAnimated": "assets/signs/animated/camisa.mp4",
     "figure": null
   },
   {
@@ -245,6 +253,7 @@
     "leccion": 11,
     "espanol": "pantalón",
     "sign": "assets/signs/pantalon.png",
+    "signAnimated": "assets/signs/animated/pantalon.mp4",
     "figure": null
   },
   {
@@ -253,6 +262,7 @@
     "leccion": 11,
     "espanol": "zapatos",
     "sign": "assets/signs/zapatos.png",
+    "signAnimated": "assets/signs/animated/zapatos.mp4",
     "figure": null
   },
   {
@@ -269,6 +279,7 @@
     "leccion": 11,
     "espanol": "vestido",
     "sign": "assets/signs/vestido.png",
+    "signAnimated": "assets/signs/animated/vestido.mp4",
     "figure": null
   },
   {
@@ -325,6 +336,7 @@
     "leccion": 11,
     "espanol": "azul",
     "sign": "assets/signs/azul.png",
+    "signAnimated": "assets/signs/animated/azul.mp4",
     "figure": null
   },
   {
@@ -333,6 +345,7 @@
     "leccion": 11,
     "espanol": "rojo",
     "sign": "assets/signs/rojo.png",
+    "signAnimated": "assets/signs/animated/rojo.mp4",
     "figure": null
   },
   {
@@ -349,6 +362,7 @@
     "leccion": 11,
     "espanol": "negro",
     "sign": "assets/signs/negro.png",
+    "signAnimated": "assets/signs/animated/negro.mp4",
     "figure": null
   },
   {
@@ -365,6 +379,7 @@
     "leccion": 11,
     "espanol": "gris",
     "sign": "assets/signs/gris.png",
+    "signAnimated": "assets/signs/animated/gris.mp4",
     "figure": null
   },
   {
@@ -373,6 +388,7 @@
     "leccion": 11,
     "espanol": "café",
     "sign": "assets/signs/cafe.png",
+    "signAnimated": "assets/signs/animated/cafe.mp4",
     "figure": null
   },
   {
@@ -389,6 +405,7 @@
     "leccion": 9,
     "espanol": "caliente",
     "sign": "assets/signs/caliente.png",
+    "signAnimated": "assets/signs/animated/caliente.mp4",
     "figure": null
   },
   {
@@ -397,6 +414,198 @@
     "leccion": 9,
     "espanol": "hambre",
     "sign": "assets/signs/hambre.png",
+    "figure": null
+  },
+  {
+    "id": "yo",
+    "tema": "pronombres personales",
+    "leccion": 1,
+    "espanol": "Yo",
+    "sign": "assets/signs/yo.png",
+    "figure": null
+  },
+  {
+    "id": "tu",
+    "tema": "pronombres personales",
+    "leccion": 1,
+    "espanol": "Tú",
+    "sign": "assets/signs/tu.png",
+    "figure": null
+  },
+  {
+    "id": "el_ella",
+    "tema": "pronombres personales",
+    "leccion": 1,
+    "espanol": "Él / Ella",
+    "sign": "assets/signs/el_ella.png",
+    "figure": null
+  },
+  {
+    "id": "ellos_ellas",
+    "tema": "pronombres personales",
+    "leccion": 1,
+    "espanol": "Ellos / Ellas",
+    "sign": "assets/signs/ellos_ellas.png",
+    "figure": null
+  },
+  {
+    "id": "usted",
+    "tema": "pronombres personales",
+    "leccion": 1,
+    "espanol": "Usted",
+    "sign": "assets/signs/usted.png",
+    "figure": null
+  },
+  {
+    "id": "ustedes",
+    "tema": "pronombres personales",
+    "leccion": 1,
+    "espanol": "Ustedes",
+    "sign": "assets/signs/ustedes.png",
+    "figure": null
+  },
+  {
+    "id": "nosotros",
+    "tema": "pronombres personales",
+    "leccion": 1,
+    "espanol": "Nosotros (presentes)",
+    "sign": "assets/signs/nosotros.png",
+    "figure": null
+  },
+  {
+    "id": "nosotros_ausentes",
+    "tema": "pronombres personales",
+    "leccion": 1,
+    "espanol": "Nosotros (ausentes)",
+    "sign": "assets/signs/nosotros_ausentes.png",
+    "figure": null
+  },
+  {
+    "id": "mi",
+    "tema": "pronombres posesivos",
+    "leccion": 2,
+    "espanol": "Mi",
+    "sign": "assets/signs/mi.png",
+    "figure": null
+  },
+  {
+    "id": "mio",
+    "tema": "pronombres posesivos",
+    "leccion": 2,
+    "espanol": "Mío",
+    "sign": "assets/signs/mio.png",
+    "figure": null
+  },
+  {
+    "id": "suyo",
+    "tema": "pronombres posesivos",
+    "leccion": 2,
+    "espanol": "Suyo",
+    "sign": "assets/signs/suyo.png",
+    "figure": null
+  },
+  {
+    "id": "tuyo",
+    "tema": "pronombres posesivos",
+    "leccion": 2,
+    "espanol": "Tuyo",
+    "sign": "assets/signs/tuyo.png",
+    "figure": null
+  },
+  {
+    "id": "nuestro",
+    "tema": "pronombres posesivos",
+    "leccion": 2,
+    "espanol": "Nuestro",
+    "sign": "assets/signs/nuestro.png",
+    "figure": null
+  },
+  {
+    "id": "tener",
+    "tema": "verbos",
+    "leccion": "vocabulario",
+    "espanol": "Tener",
+    "sign": "assets/signs/tener.png",
+    "figure": null
+  },
+  {
+    "id": "hablar",
+    "tema": "verbos",
+    "leccion": "vocabulario",
+    "espanol": "Hablar",
+    "sign": "assets/signs/hablar.png",
+    "figure": null
+  },
+  {
+    "id": "necesitar",
+    "tema": "verbos",
+    "leccion": "vocabulario",
+    "espanol": "Necesitar",
+    "sign": "assets/signs/necesitar.png",
+    "figure": null
+  },
+  {
+    "id": "gustar",
+    "tema": "verbos",
+    "leccion": "vocabulario",
+    "espanol": "Gustar",
+    "sign": "assets/signs/gustar.png",
+    "figure": null
+  },
+  {
+    "id": "ayudar",
+    "tema": "verbos",
+    "leccion": "vocabulario",
+    "espanol": "Ayudar",
+    "sign": "assets/signs/ayudar.png",
+    "figure": null
+  },
+  {
+    "id": "entender",
+    "tema": "verbos",
+    "leccion": "vocabulario",
+    "espanol": "Entender",
+    "sign": "assets/signs/entender.png",
+    "figure": null
+  },
+  {
+    "id": "aprender",
+    "tema": "verbos",
+    "leccion": "vocabulario",
+    "espanol": "Aprender",
+    "sign": "assets/signs/aprender.png",
+    "figure": null
+  },
+  {
+    "id": "explicar",
+    "tema": "verbos",
+    "leccion": "vocabulario",
+    "espanol": "Explicar",
+    "sign": "assets/signs/explicar.png",
+    "figure": null
+  },
+  {
+    "id": "preguntar",
+    "tema": "verbos",
+    "leccion": "vocabulario",
+    "espanol": "Preguntar",
+    "sign": "assets/signs/preguntar.png",
+    "figure": null
+  },
+  {
+    "id": "por_favor",
+    "tema": "expresiones",
+    "leccion": "vocabulario",
+    "espanol": "Por favor",
+    "sign": "assets/signs/por_favor.png",
+    "figure": null
+  },
+  {
+    "id": "gracias",
+    "tema": "expresiones",
+    "leccion": "vocabulario",
+    "espanol": "Gracias",
+    "sign": "assets/signs/gracias.png",
     "figure": null
   }
 ]

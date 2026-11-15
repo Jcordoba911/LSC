@@ -1,0 +1,104 @@
+[
+  {
+    "id": "s01",
+    "tema": "animales",
+    "leccion": 10,
+    "palabras": [
+      "perro",
+      "negro"
+    ],
+    "frase": "El perro es negro"
+  },
+  {
+    "id": "s02",
+    "tema": "animales",
+    "leccion": 10,
+    "palabras": [
+      "gato",
+      "gris"
+    ],
+    "frase": "El gato es gris"
+  },
+  {
+    "id": "s03",
+    "tema": "animales",
+    "leccion": 10,
+    "palabras": [
+      "pajaro",
+      "azul"
+    ],
+    "frase": "El pájaro es azul"
+  },
+  {
+    "id": "s04",
+    "tema": "alimentos",
+    "leccion": 9,
+    "palabras": [
+      "sopa",
+      "pollo",
+      "caliente"
+    ],
+    "frase": "La sopa de pollo está caliente"
+  },
+  {
+    "id": "s05",
+    "tema": "alimentos",
+    "leccion": 9,
+    "palabras": [
+      "chocolate",
+      "caliente"
+    ],
+    "frase": "El chocolate está caliente"
+  },
+  {
+    "id": "s06",
+    "tema": "alimentos",
+    "leccion": 9,
+    "palabras": [
+      "arroz",
+      "pollo"
+    ],
+    "frase": "Arroz con pollo"
+  },
+  {
+    "id": "s07",
+    "tema": "prendas",
+    "leccion": 11,
+    "palabras": [
+      "camisa",
+      "azul"
+    ],
+    "frase": "La camisa es azul"
+  },
+  {
+    "id": "s08",
+    "tema": "prendas",
+    "leccion": 11,
+    "palabras": [
+      "vestido",
+      "rojo"
+    ],
+    "frase": "El vestido es rojo"
+  },
+  {
+    "id": "s09",
+    "tema": "prendas",
+    "leccion": 11,
+    "palabras": [
+      "zapatos",
+      "cafe"
+    ],
+    "frase": "Los zapatos son cafés"
+  },
+  {
+    "id": "s10",
+    "tema": "prendas",
+    "leccion": 11,
+    "palabras": [
+      "camisa",
+      "pantalon",
+      "negro"
+    ],
+    "frase": "La camisa y el pantalón son negros"
+  }
+]
