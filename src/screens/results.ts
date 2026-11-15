@@ -22,8 +22,8 @@ export const resultsScreen: Screen = (root) => {
   if (!last) return navigate('/');
   const { result, isRecord } = last;
   const tema = encodeURIComponent(result.tema);
-  const playAgainHref = last.playAgainHref ?? `#/jugar/${encodeURIComponent(tema)}`;
-  const review = last.review ?? { href: `#/aprende/${encodeURIComponent(tema)}`, label: 'Repasar' };
+  const playAgainHref = last.playAgainHref ?? `#/jugar/${tema}`;
+  const review = last.review ?? { href: `#/aprende/${tema}`, label: 'Repasar' };
   const won = result.livesLeft > 0;
   root.append(
     h(
