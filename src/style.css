@@ -178,22 +178,22 @@ h1, h2, h3 { line-height: 1.2; margin: 0.5rem 0; }
 .memory-difficulty { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; padding: 1.25rem; border: 1px solid rgb(38 51 69 / 0.08); border-radius: 24px; background: var(--surface); box-shadow: 0 10px 28px rgb(38 51 69 / 0.07); }
 .memory-difficulty h3, .memory-difficulty p { margin: 0; }
 .memory-difficulty .btn { margin-top: 0.5rem; }
-.memory-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.75rem; }
-.memory-grid.large { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 0.45rem; }
+.memory-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0.85rem; max-width: 1100px; margin: 0 auto; }
+.memory-grid.large { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 0.45rem; }
 .memory-card { position: relative; width: 100%; aspect-ratio: 3 / 4; padding: 0; border: 0; border-radius: var(--radius); background: transparent; color: var(--text); perspective: 700px; }
 .memory-card:disabled { opacity: 1; cursor: default; }
 .card-inner { position: absolute; inset: 0; display: block; transform-style: preserve-3d; transition: transform 0.4s; }
 .memory-card.flipped .card-inner { transform: rotateY(180deg); }
 .card-front, .card-back { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 2px solid #d5d9e3; border-radius: var(--radius); background: var(--surface); backface-visibility: hidden; }
 .card-front { transform: rotateY(180deg); }
-.card-back { background: var(--accent); color: #fff; font-size: clamp(1.5rem, 8vw, 3rem); }
+.card-back { background: var(--accent); color: #fff; font-size: clamp(1.8rem, 8vw, 3.2rem); }
 .memory-card.matched .card-front { border-color: var(--ok); box-shadow: inset 0 0 0 2px var(--ok); }
 .card-front .sign-media { width: 100%; height: 100%; max-width: none; aspect-ratio: auto; object-fit: contain; }
 .memory-word { padding: 0.35rem; font-size: clamp(0.85rem, 2.8vw, 1.25rem); font-weight: 700; text-align: center; text-transform: capitalize; }
 .memory-grid.large .memory-word { padding: 0.2rem; font-size: clamp(0.65rem, 1.4vw, 0.9rem); overflow-wrap: anywhere; }
 
 @media (max-width: 420px) {
-  .memory-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+  .memory-grid, .memory-grid.large { grid-template-columns: repeat(3, minmax(80px, 1fr)); gap: 0.5rem; }
 }
 
 @media (max-width: 800px) {
