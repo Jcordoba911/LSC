@@ -19,7 +19,7 @@ const modes = [
   {
     icon: '🤟',
     title: 'Memoria: encuentra los pares',
-    description: 'Une cada seña con su palabra en un juego de memoria.',
+    description: 'Une señas y palabras de todos los temas. Se desbloquea al completar Aprendizaje.',
     href: '#/memoria',
     className: 'mode-card-yellow',
   },
@@ -36,7 +36,7 @@ export const modesScreen: Screen = (root) => {
       h(
         'p',
         { class: 'muted modes-intro' },
-        'Elige cómo quieres practicar. Completa Aprendizaje de cada tema para desbloquear sus juegos; puedes avanzar sin prisa.',
+        'Elige cómo quieres practicar. Los juegos por tema se desbloquean al completar su Aprendizaje; Memoria requiere completar todos los temas.',
       ),
       h(
         'div',

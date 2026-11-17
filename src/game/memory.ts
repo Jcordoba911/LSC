@@ -1,13 +1,18 @@
 import type { Word } from '../types';
 import { shuffle } from './signToWord';
 
-export interface MemoryCard {
-  wordId: string;
-  kind: 'sign' | 'text';
-}
+export type MemoryCard =
+  | {
+      wordId: string;
+      kind: 'sign';
+      media: 'image' | 'video';
+    }
+  | {
+      wordId: string;
+      kind: 'text';
+    };
 
 export interface MemoryGameState {
-  tema: string;
   cards: MemoryCard[];
   flipped: number[];
   matched: string[];
@@ -26,6 +31,14 @@ export interface FlipResult {
   matched: boolean | null;
 }
 
+export const DIFFICULTIES = {
+  facil: 15,
+  medio: 25,
+  dificil: 40,
+} as const;
+
+export type MemoryDifficulty = keyof typeof DIFFICULTIES;
+
 const POINTS_PER_PAIR = 20;
 const EXTRA_MOVE_PENALTY = 2;
 
@@ -35,21 +48,22 @@ function scoreFor(matched: number, moves: number): number {
 }
 
 export function createMemoryGame(
-  tema: string,
   allWords: readonly Word[],
   { pairs = 6, rng = Math.random }: MemoryGameOptions = {},
 ): MemoryGameState {
   const pairCount = Math.max(0, Math.floor(pairs));
-  const selected = shuffle(allWords.filter((word) => word.tema === tema), rng).slice(0, pairCount);
+  const selected = shuffle(allWords, rng).slice(0, pairCount);
   const cards = shuffle(
-    selected.flatMap(({ id }) => [
-      { wordId: id, kind: 'sign' as const },
-      { wordId: id, kind: 'text' as const },
-    ]),
+    selected.flatMap(({ id, signAnimated }) => {
+      const media: 'image' | 'video' = signAnimated && rng() < 0.5 ? 'video' : 'image';
+      return [
+        { wordId: id, kind: 'sign' as const, media },
+        { wordId: id, kind: 'text' as const },
+      ];
+    }),
     rng,
   );
   return {
-    tema,
     cards,
     flipped: [],
     matched: [],
