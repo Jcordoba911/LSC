@@ -564,7 +564,7 @@
   },
   {
     "id": "tener",
-    "tema": "verbos",
+    "tema": "verbos y expresiones",
     "leccion": "vocabulario",
     "espanol": "Tener",
     "sign": "assets/signs/tener.png",
@@ -573,7 +573,7 @@
   },
   {
     "id": "hablar",
-    "tema": "verbos",
+    "tema": "verbos y expresiones",
     "leccion": "vocabulario",
     "espanol": "Hablar",
     "sign": "assets/signs/hablar.png",
@@ -582,7 +582,7 @@
   },
   {
     "id": "necesitar",
-    "tema": "verbos",
+    "tema": "verbos y expresiones",
     "leccion": "vocabulario",
     "espanol": "Necesitar",
     "sign": "assets/signs/necesitar.png",
@@ -591,7 +591,7 @@
   },
   {
     "id": "gustar",
-    "tema": "verbos",
+    "tema": "verbos y expresiones",
     "leccion": "vocabulario",
     "espanol": "Gustar",
     "sign": "assets/signs/gustar.png",
@@ -600,7 +600,7 @@
   },
   {
     "id": "ayudar",
-    "tema": "verbos",
+    "tema": "verbos y expresiones",
     "leccion": "vocabulario",
     "espanol": "Ayudar",
     "sign": "assets/signs/ayudar.png",
@@ -609,7 +609,7 @@
   },
   {
     "id": "entender",
-    "tema": "verbos",
+    "tema": "verbos y expresiones",
     "leccion": "vocabulario",
     "espanol": "Entender",
     "sign": "assets/signs/entender.png",
@@ -618,7 +618,7 @@
   },
   {
     "id": "aprender",
-    "tema": "verbos",
+    "tema": "verbos y expresiones",
     "leccion": "vocabulario",
     "espanol": "Aprender",
     "sign": "assets/signs/aprender.png",
@@ -627,7 +627,7 @@
   },
   {
     "id": "explicar",
-    "tema": "verbos",
+    "tema": "verbos y expresiones",
     "leccion": "vocabulario",
     "espanol": "Explicar",
     "sign": "assets/signs/explicar.png",
@@ -636,7 +636,7 @@
   },
   {
     "id": "preguntar",
-    "tema": "verbos",
+    "tema": "verbos y expresiones",
     "leccion": "vocabulario",
     "espanol": "Preguntar",
     "sign": "assets/signs/preguntar.png",
@@ -644,16 +644,8 @@
     "signAnimated": "assets/signs/animated/preguntar.mp4"
   },
   {
-    "id": "por_favor",
-    "tema": "expresiones",
-    "leccion": "vocabulario",
-    "espanol": "Por favor",
-    "sign": "assets/signs/por_favor.png",
-    "figure": null
-  },
-  {
     "id": "gracias",
-    "tema": "expresiones",
+    "tema": "verbos y expresiones",
     "leccion": "vocabulario",
     "espanol": "Gracias",
     "sign": "assets/signs/gracias.png",
