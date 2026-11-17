@@ -8,31 +8,49 @@ export interface ThemeProgress {
 
 export type Progress = Record<string, ThemeProgress>;
 
+type StorageLike = Pick<Storage, 'getItem' | 'setItem' | 'removeItem'>;
+
 function emptyTheme(): ThemeProgress {
   return { learned: false, seen: [], bestScore: 0 };
 }
 
-function read(storage: Storage): Progress {
+function getStorage(storage?: StorageLike): StorageLike | null {
+  if (storage) return storage;
+  if (typeof globalThis !== 'undefined' && 'localStorage' in globalThis) {
+    const candidate = globalThis.localStorage;
+    if (candidate) return candidate;
+  }
+  return null;
+}
+
+function read(storage: StorageLike | null): Progress {
+  if (!storage) return {};
   try {
     const raw = storage.getItem(STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as Progress) : {};
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? (parsed as Progress) : {};
   } catch {
     return {};
   }
 }
 
-export function createProgressService(storage: Storage = localStorage) {
+export function createProgressService(storage?: StorageLike) {
+  const store = getStorage(storage);
+
   const update = (tema: string, fn: (p: ThemeProgress) => void) => {
-    const all = read(storage);
+    if (!store) return;
+    const all = read(store);
     const theme = { ...emptyTheme(), ...all[tema] };
     fn(theme);
     all[tema] = theme;
-    storage.setItem(STORAGE_KEY, JSON.stringify(all));
+    store.setItem(STORAGE_KEY, JSON.stringify(all));
   };
 
   return {
     get(tema: string): ThemeProgress {
-      return { ...emptyTheme(), ...read(storage)[tema] };
+      const all = read(store);
+      return { ...emptyTheme(), ...all[tema] };
     },
     /** Aprendido solo si se marcó y además se vieron todas las palabras actuales del tema. */
     isLearned(tema: string, wordIds: readonly string[]): boolean {
@@ -58,7 +76,8 @@ export function createProgressService(storage: Storage = localStorage) {
       return isRecord;
     },
     reset(): void {
-      storage.removeItem(STORAGE_KEY);
+      if (!store) return;
+      store.removeItem(STORAGE_KEY);
     },
   };
 }
