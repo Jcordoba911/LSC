@@ -1,3 +1,5 @@
+import { createSiteFooter, createSiteHeader } from './components/siteShell';
+
 export type Params = Record<string, string>;
 export type Screen = (root: HTMLElement, params: Params) => void | Promise<void>;
 
@@ -24,13 +26,15 @@ export function createRouter(root: HTMLElement, routes: Record<string, Screen>, 
       if (!match) continue;
       const params: Params = {};
       route.keys.forEach((key, i) => (params[key] = decodeURIComponent(match[i + 1])));
-      root.replaceChildren();
+      const content = document.createElement('main');
+      content.className = 'page-content';
+      root.replaceChildren(createSiteHeader(path), content, createSiteFooter());
       window.scrollTo(0, 0);
       try {
-        await route.screen(root, params);
+        await route.screen(content, params);
       } catch (err) {
         console.error(err);
-        root.replaceChildren(errorView());
+        content.replaceChildren(errorView());
       }
       return;
     }

@@ -10,6 +10,8 @@ REPO: `Jcordoba911/LSC`, juego web educativo de Lengua de Señas Colombiana.
 - Despliegue a GitHub Pages mediante `.github/workflows/deploy.yml`: `validate` → `test` → `build` → `deploy-pages`.
 - Mantener compatibilidad con `BASE_PATH`, `import.meta.env.BASE_URL` y GitHub Pages.
 - Mantener la separación entre UI (`src/screens/`) y lógica pura (`src/game/`).
+- El router compone una cabecera y un pie comunes; conservarlos al crear o cambiar pantallas.
+- Usar `src/components/siteShell.ts` para la navegación global, sin duplicar navbars por pantalla.
 
 ## Datos y servicios existentes
 
@@ -56,10 +58,11 @@ REPO: `Jcordoba911/LSC`, juego web educativo de Lengua de Señas Colombiana.
 - Jugar mantiene el bloqueo según `progress.isLearned(tema, wordIds)` y el puntaje general por tema con `progress.saveScore(tema, score)`.
 - `src/screens/sentence.ts` ya es inherentemente de video mediante `signAnimated`; no agregar selector de estilo.
 
-## Rutas requeridas
+## Navegación y rutas requeridas
 
 Registrar en `src/main.ts`:
 
+- `/modos` → `modesScreen`
 - `/aprende/:tema/:estilo` → `learnThemeScreen`
 - `/jugar/:tema/:estilo` → `gameScreen`
 - `/memoria` → `memoryIndexScreen`
@@ -67,6 +70,26 @@ Registrar en `src/main.ts`:
 - `/memoria/:tema/:estilo` → `memoryScreen`
 
 Mantener también las rutas existentes sin `:estilo`, que muestran el selector cuando aplica.
+
+La portada ofrece únicamente **Aprendizaje** (`#/aprende`) y **Modos de Juego** (`#/modos`).
+El hub de modos enlaza a `#/jugar`, `#/frases` y `#/memoria`. Los índices de Jugar, frases y
+Memoria vuelven a `#/modos`; el índice de Aprendizaje vuelve a `#/`.
+
+En `src/components/themeList.ts`, `createThemeList(themes)` muestra solo repaso y progreso;
+`createPlayThemeList(themes)` muestra acciones de juego bloqueadas hasta completar Aprendizaje.
+Aprendizaje sirve para repasar, no para iniciar juegos directamente desde cada tarjeta.
+El índice de frases bloquea cada tema hasta completar su Aprendizaje; "Todas las frases" requiere
+que estén aprendidos todos los temas que participan en frases. Mantener el bloqueo también al
+abrir una ruta de partida directamente.
+
+## Contenido de vocabulario
+
+- Unificar el tema de las palabras `tener`, `hablar`, `necesitar`, `gustar`, `ayudar`, `entender`,
+  `aprender`, `explicar`, `preguntar` y `gracias` como `verbos y expresiones`.
+- No incluir `por_favor` en `words.json` ni conservar su asset si queda sin referencias.
+- No migrar progreso de los ids de tema anteriores en `localStorage`; el cambio de id inicia ese
+  tema con progreso nuevo.
+- Mantener `sentences.json` y sus ids de palabras válidos al retirar vocabulario.
 
 ## Modo Memoria
 
@@ -93,7 +116,7 @@ Agregar `src/game/memory.test.ts` con pruebas Vitest para cantidad de cartas, pa
 - Usar animación `rotateY` y dejar deshabilitadas/visibles las cartas emparejadas.
 - Mostrar movimientos y pares en el HUD.
 - Al terminar, guardar `progress.saveScore('memoria:' + tema, score)`, llamar a `setLastResult()` y navegar a `/resultados`. El enlace de volver a jugar conserva el estilo.
-- Agregar al menú: `h('a', { class: 'btn btn-lg', href: '#/memoria' }, 'Memoria: encuentra los pares')`.
+- La entrada a Memoria está en el hub `#/modos`, no como acceso directo en la portada.
 
 ## Estilos y documentación
 
@@ -101,17 +124,23 @@ Agregar `src/game/memory.test.ts` con pruebas Vitest para cantidad de cartas, pa
 - Agregar estilos para `.memory-grid`, `.memory-card`, `.card-inner`, `.card-inner.flipped`, `.card-front`, `.card-back` y `.memory-card.matched`.
 - Las cartas deben usar perspectiva, `preserve-3d`, transición de aproximadamente `0.4s`, `backface-visibility: hidden`, proporción `3/4` y borde verde para los pares.
 - Actualizar `README.md` para documentar Memoria y la selección imagen/video.
+- Mantener una identidad visual alegre, inclusiva y accesible en todas las rutas: fondos claros,
+  acentos cálidos y vivos (amarillo, coral, naranja, turquesa y azul), tarjetas redondeadas,
+  sombras suaves, iconografía coherente y animaciones sutiles.
+- La portada tiene un hero motivador con un CTA a Aprendizaje y acceso secundario a Modos; usar
+  recursos visuales relacionados con manos, señas y comunicación. El hub presenta los tres modos.
+- Mantener navegación global accesible, diseño responsive, contraste y foco visible; respetar
+  `prefers-reduced-motion`. Evitar un tono de curso obligatorio o una estética corporativa fría.
 
 ## Flujo de trabajo y commits previstos
 
-Trabajar en la rama `feature/memoria-y-estilos` y abrir un PR hacia `main`. Separar los cambios en estos commits:
+Para el cambio de organización de temas y navegación, trabajar en la rama
+`feature/aprendizaje-y-modos` y abrir un PR hacia `main`. Separar estos cambios en commits:
 
-1. `assets: reemplazar imágenes de señas con nuevo stock`
-2. `feat: helper signFor y selector de estilo en Aprende`
-3. `feat: selector de estilo en modo Jugar`
-4. `feat: lógica del juego de memoria con tests`
-5. `feat: pantalla, rutas y estilos del modo Memoria`
-6. `docs: actualizar README`
+1. `data: fusionar tema expresiones en verbos y expresiones, quitar por_favor`
+2. `feat: menú con Aprendizaje y hub de Modos de Juego` (incluye la identidad visual y navegación compartidas)
+3. `feat: separar listas de temas para aprender vs jugar`
+4. `fix: back links de índices de juegos apuntan a /modos`
 
 ## Verificación
 
