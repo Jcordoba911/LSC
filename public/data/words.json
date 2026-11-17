@@ -225,14 +225,6 @@
     "signAnimated": "assets/signs/animated/helado.mp4"
   },
   {
-    "id": "pizza",
-    "tema": "alimentos",
-    "leccion": 9,
-    "espanol": "pizza",
-    "sign": "assets/signs/pizza.png",
-    "figure": null
-  },
-  {
     "id": "zanahoria",
     "tema": "alimentos",
     "leccion": 9,
@@ -341,14 +333,6 @@
     "signAnimated": "assets/signs/animated/corbata.mp4"
   },
   {
-    "id": "saco",
-    "tema": "prendas",
-    "leccion": 11,
-    "espanol": "saco",
-    "sign": "assets/signs/saco.png",
-    "figure": null
-  },
-  {
     "id": "amarillo",
     "tema": "colores",
     "leccion": 11,
@@ -421,28 +405,12 @@
     "figure": null
   },
   {
-    "id": "naranja",
-    "tema": "alimentos",
-    "leccion": 9,
-    "espanol": "naranja",
-    "sign": "assets/signs/naranja.png",
-    "figure": null
-  },
-  {
     "id": "caliente",
     "tema": "alimentos",
     "leccion": 9,
     "espanol": "caliente",
     "sign": "assets/signs/caliente.png",
     "signAnimated": "assets/signs/animated/caliente.mp4",
-    "figure": null
-  },
-  {
-    "id": "hambre",
-    "tema": "alimentos",
-    "leccion": 9,
-    "espanol": "hambre",
-    "sign": "assets/signs/hambre.png",
     "figure": null
   },
   {
