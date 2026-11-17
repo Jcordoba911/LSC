@@ -2,6 +2,16 @@ import type { Theme, Word } from '../types';
 
 let cache: Promise<Word[]> | null = null;
 
+export type SignStyle = 'imagen' | 'video';
+
+export function isSignStyle(value: string | undefined): value is SignStyle {
+  return value === 'imagen' || value === 'video';
+}
+
+export function signFor(word: Word, estilo: SignStyle): string {
+  return estilo === 'video' && word.signAnimated ? word.signAnimated : word.sign;
+}
+
 /** Convierte una ruta relativa a public/ en URL respetando el base path de Vite. */
 export function assetUrl(path: string): string {
   return import.meta.env.BASE_URL + path.replace(/^\/+/, '');

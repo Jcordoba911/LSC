@@ -15,6 +15,7 @@ export const menuScreen: Screen = (root) => {
         h('a', { class: 'btn btn-primary btn-lg', href: '#/aprende' }, 'Aprende'),
         h('a', { class: 'btn btn-lg', href: '#/jugar' }, 'Jugar: seña a palabra'),
         h('a', { class: 'btn btn-lg', href: '#/frases' }, 'Construye la frase'),
+        h('a', { class: 'btn btn-lg', href: '#/memoria' }, 'Memoria: encuentra los pares'),
       ),
       h(
         'button',

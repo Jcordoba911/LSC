@@ -45,6 +45,8 @@ h1, h2, h3 { line-height: 1.2; margin: 0.5rem 0; }
 .btn-link { border: none; background: none; color: var(--muted); text-decoration: underline; font-weight: 400; }
 
 .actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.style-selector { align-items: flex-start; }
+.style-options { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 
 .theme-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 .theme-card { background: var(--surface); border-radius: var(--radius); padding: 1rem; box-shadow: 0 2px 8px rgb(0 0 0 / 0.06); display: flex; flex-direction: column; gap: 0.5rem; }
@@ -90,3 +92,19 @@ h1, h2, h3 { line-height: 1.2; margin: 0.5rem 0; }
 .feedback { min-height: 1.5rem; text-align: center; font-weight: 600; margin: 0; }
 .feedback.ok { color: var(--ok); }
 .feedback.bad { color: var(--bad); }
+
+.memory-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.75rem; }
+.memory-card { position: relative; width: 100%; aspect-ratio: 3 / 4; padding: 0; border: 0; border-radius: var(--radius); background: transparent; color: var(--text); perspective: 700px; }
+.memory-card:disabled { opacity: 1; cursor: default; }
+.card-inner { position: absolute; inset: 0; display: block; transform-style: preserve-3d; transition: transform 0.4s; }
+.memory-card.flipped .card-inner { transform: rotateY(180deg); }
+.card-front, .card-back { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 2px solid #d5d9e3; border-radius: var(--radius); background: var(--surface); backface-visibility: hidden; }
+.card-front { transform: rotateY(180deg); }
+.card-back { background: var(--accent); color: #fff; font-size: clamp(1.5rem, 8vw, 3rem); }
+.memory-card.matched .card-front { border-color: var(--ok); box-shadow: inset 0 0 0 2px var(--ok); }
+.card-front .sign-media { width: 100%; height: 100%; max-width: none; aspect-ratio: auto; object-fit: contain; }
+.memory-word { padding: 0.35rem; font-size: clamp(0.85rem, 2.8vw, 1.25rem); font-weight: 700; text-align: center; text-transform: capitalize; }
+
+@media (max-width: 420px) {
+  .memory-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+}

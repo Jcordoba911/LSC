@@ -1,10 +1,11 @@
 import { createSignMedia } from '../components/signMedia';
+import { createStyleSelector } from '../components/styleSelector';
 import { createThemeList } from '../components/themeList';
 import { h } from '../dom';
 import { answer, createGame, currentRound, type GameState } from '../game/signToWord';
 import { navigate, type Screen } from '../router';
 import { progress } from '../services/progress';
-import { loadThemes, loadWords, themeLabel } from '../services/words';
+import { isSignStyle, loadThemes, loadWords, signFor, themeLabel } from '../services/words';
 import { setLastResult } from './results';
 
 const FEEDBACK_MS = 900;
@@ -17,15 +18,22 @@ export const gameIndexScreen: Screen = async (root) => {
       { class: 'screen' },
       h('a', { class: 'back', href: '#/' }, '← Menú'),
       h('h2', {}, 'Jugar: seña a palabra'),
-      h('p', { class: 'muted' }, 'Mira la seña y elige la palabra correcta.'),
+      h('p', { class: 'muted' }, 'Elige un tema y estilo, mira la seña y selecciona la palabra correcta.'),
       createThemeList(themes),
     ),
   );
 };
 
-export const gameScreen: Screen = async (root, { tema }) => {
+export const gameScreen: Screen = async (root, { tema, estilo }) => {
   const words = await loadWords();
-  const themeWordIds = words.filter((w) => w.tema === tema).map((w) => w.id);
+  const themeWords = words.filter((w) => w.tema === tema);
+  if (themeWords.length === 0) return navigate('/jugar');
+  if (!isSignStyle(estilo)) {
+    root.append(createStyleSelector('jugar', tema, themeWords.filter((word) => word.signAnimated).length));
+    return;
+  }
+  const selectedStyle = estilo;
+  const themeWordIds = themeWords.map((w) => w.id);
   if (!progress.isLearned(tema, themeWordIds)) {
     root.append(
       h(
@@ -75,6 +83,7 @@ export const gameScreen: Screen = async (root, { tema }) => {
         livesLeft: state.lives,
       },
       isRecord,
+      playAgainHref: `#/jugar/${encodeURIComponent(tema)}/${selectedStyle}`,
     });
     navigate('/resultados');
   }
@@ -83,7 +92,7 @@ export const gameScreen: Screen = async (root, { tema }) => {
     renderHud();
     const round = currentRound(state);
     if (!round) return finish();
-    signSlot.replaceChildren(createSignMedia(round.word.sign, '¿Qué palabra es esta seña?'));
+    signSlot.replaceChildren(createSignMedia(signFor(round.word, selectedStyle), '¿Qué palabra es esta seña?'));
     options.replaceChildren(
       ...round.options.map((option) =>
         h('button', { class: 'btn option', onclick: (e) => choose(option, e.currentTarget as HTMLButtonElement) }, option),

@@ -23,7 +23,8 @@
     "leccion": 10,
     "espanol": "caballo",
     "sign": "assets/signs/caballo.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/caballo.mp4"
   },
   {
     "id": "pez",
@@ -31,7 +32,8 @@
     "leccion": 10,
     "espanol": "pez",
     "sign": "assets/signs/pez.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/pez.mp4"
   },
   {
     "id": "pato",
@@ -39,7 +41,8 @@
     "leccion": 10,
     "espanol": "pato",
     "sign": "assets/signs/pato.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/pato.mp4"
   },
   {
     "id": "gallina",
@@ -47,7 +50,8 @@
     "leccion": 10,
     "espanol": "gallina",
     "sign": "assets/signs/gallina.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/gallina.mp4"
   },
   {
     "id": "oso",
@@ -55,7 +59,8 @@
     "leccion": 10,
     "espanol": "oso",
     "sign": "assets/signs/oso.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/oso.mp4"
   },
   {
     "id": "conejo",
@@ -63,7 +68,8 @@
     "leccion": 10,
     "espanol": "conejo",
     "sign": "assets/signs/conejo.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/conejo.mp4"
   },
   {
     "id": "elefante",
@@ -71,7 +77,8 @@
     "leccion": 10,
     "espanol": "elefante",
     "sign": "assets/signs/elefante.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/elefante.mp4"
   },
   {
     "id": "tortuga",
@@ -79,7 +86,8 @@
     "leccion": 10,
     "espanol": "tortuga",
     "sign": "assets/signs/tortuga.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/tortuga.mp4"
   },
   {
     "id": "mariposa",
@@ -87,7 +95,8 @@
     "leccion": 10,
     "espanol": "mariposa",
     "sign": "assets/signs/mariposa.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/mariposa.mp4"
   },
   {
     "id": "raton",
@@ -95,7 +104,8 @@
     "leccion": 10,
     "espanol": "ratón",
     "sign": "assets/signs/raton.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/raton.mp4"
   },
   {
     "id": "pajaro",
@@ -112,7 +122,8 @@
     "leccion": 10,
     "espanol": "cabra",
     "sign": "assets/signs/cabra.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/cabra.mp4"
   },
   {
     "id": "arroz",
@@ -129,7 +140,8 @@
     "leccion": 9,
     "espanol": "arepa",
     "sign": "assets/signs/arepa.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/arepa.mp4"
   },
   {
     "id": "banano",
@@ -137,7 +149,8 @@
     "leccion": 9,
     "espanol": "banano",
     "sign": "assets/signs/banano.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/banano.mp4"
   },
   {
     "id": "carne",
@@ -145,7 +158,8 @@
     "leccion": 9,
     "espanol": "carne",
     "sign": "assets/signs/carne.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/carne.mp4"
   },
   {
     "id": "leche",
@@ -153,7 +167,8 @@
     "leccion": 9,
     "espanol": "leche",
     "sign": "assets/signs/leche.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/leche.mp4"
   },
   {
     "id": "pan",
@@ -161,7 +176,8 @@
     "leccion": 9,
     "espanol": "pan",
     "sign": "assets/signs/pan.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/pan.mp4"
   },
   {
     "id": "huevo",
@@ -169,7 +185,8 @@
     "leccion": 9,
     "espanol": "huevo",
     "sign": "assets/signs/huevo.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/huevo.mp4"
   },
   {
     "id": "jugo",
@@ -177,7 +194,8 @@
     "leccion": 9,
     "espanol": "jugo",
     "sign": "assets/signs/jugo.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/jugo.mp4"
   },
   {
     "id": "sopa",
@@ -203,7 +221,8 @@
     "leccion": 9,
     "espanol": "helado",
     "sign": "assets/signs/helado.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/helado.mp4"
   },
   {
     "id": "pizza",
@@ -219,7 +238,8 @@
     "leccion": 9,
     "espanol": "zanahoria",
     "sign": "assets/signs/zanahoria.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/zanahoria.mp4"
   },
   {
     "id": "galleta",
@@ -227,7 +247,8 @@
     "leccion": 9,
     "espanol": "galleta",
     "sign": "assets/signs/galleta.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/galleta.mp4"
   },
   {
     "id": "chocolate",
@@ -271,7 +292,8 @@
     "leccion": 11,
     "espanol": "falda",
     "sign": "assets/signs/falda.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/falda.mp4"
   },
   {
     "id": "vestido",
@@ -288,7 +310,8 @@
     "leccion": 11,
     "espanol": "sombrero",
     "sign": "assets/signs/sombrero.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/sombrero.mp4"
   },
   {
     "id": "medias",
@@ -296,7 +319,8 @@
     "leccion": 11,
     "espanol": "medias",
     "sign": "assets/signs/medias.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/medias.mp4"
   },
   {
     "id": "blusa",
@@ -304,7 +328,8 @@
     "leccion": 11,
     "espanol": "blusa",
     "sign": "assets/signs/blusa.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/blusa.mp4"
   },
   {
     "id": "corbata",
@@ -312,7 +337,8 @@
     "leccion": 11,
     "espanol": "corbata",
     "sign": "assets/signs/corbata.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/corbata.mp4"
   },
   {
     "id": "saco",
@@ -328,7 +354,8 @@
     "leccion": 11,
     "espanol": "amarillo",
     "sign": "assets/signs/amarillo.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/amarillo.mp4"
   },
   {
     "id": "azul",
@@ -354,7 +381,8 @@
     "leccion": 11,
     "espanol": "verde",
     "sign": "assets/signs/verde.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/verde.mp4"
   },
   {
     "id": "negro",
@@ -371,7 +399,8 @@
     "leccion": 11,
     "espanol": "morado",
     "sign": "assets/signs/morado.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/morado.mp4"
   },
   {
     "id": "gris",
@@ -422,7 +451,8 @@
     "leccion": 1,
     "espanol": "Yo",
     "sign": "assets/signs/yo.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/yo.mp4"
   },
   {
     "id": "tu",
@@ -430,7 +460,8 @@
     "leccion": 1,
     "espanol": "Tú",
     "sign": "assets/signs/tu.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/tu.mp4"
   },
   {
     "id": "el_ella",
@@ -438,7 +469,8 @@
     "leccion": 1,
     "espanol": "Él / Ella",
     "sign": "assets/signs/el_ella.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/el_ella.mp4"
   },
   {
     "id": "ellos_ellas",
@@ -446,7 +478,8 @@
     "leccion": 1,
     "espanol": "Ellos / Ellas",
     "sign": "assets/signs/ellos_ellas.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/ellos_ellas.mp4"
   },
   {
     "id": "usted",
@@ -454,7 +487,8 @@
     "leccion": 1,
     "espanol": "Usted",
     "sign": "assets/signs/usted.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/usted.mp4"
   },
   {
     "id": "ustedes",
@@ -462,7 +496,8 @@
     "leccion": 1,
     "espanol": "Ustedes",
     "sign": "assets/signs/ustedes.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/ustedes.mp4"
   },
   {
     "id": "nosotros",
@@ -470,7 +505,8 @@
     "leccion": 1,
     "espanol": "Nosotros (presentes)",
     "sign": "assets/signs/nosotros.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/nosotros.mp4"
   },
   {
     "id": "nosotros_ausentes",
@@ -478,7 +514,8 @@
     "leccion": 1,
     "espanol": "Nosotros (ausentes)",
     "sign": "assets/signs/nosotros_ausentes.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/nosotros_ausentes.mp4"
   },
   {
     "id": "mi",
@@ -486,7 +523,8 @@
     "leccion": 2,
     "espanol": "Mi",
     "sign": "assets/signs/mi.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/mi.mp4"
   },
   {
     "id": "mio",
@@ -494,7 +532,8 @@
     "leccion": 2,
     "espanol": "Mío",
     "sign": "assets/signs/mio.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/mio.mp4"
   },
   {
     "id": "suyo",
@@ -502,7 +541,8 @@
     "leccion": 2,
     "espanol": "Suyo",
     "sign": "assets/signs/suyo.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/suyo.mp4"
   },
   {
     "id": "tuyo",
@@ -510,7 +550,8 @@
     "leccion": 2,
     "espanol": "Tuyo",
     "sign": "assets/signs/tuyo.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/tuyo.mp4"
   },
   {
     "id": "nuestro",
@@ -518,7 +559,8 @@
     "leccion": 2,
     "espanol": "Nuestro",
     "sign": "assets/signs/nuestro.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/nuestro.mp4"
   },
   {
     "id": "tener",
@@ -526,7 +568,8 @@
     "leccion": "vocabulario",
     "espanol": "Tener",
     "sign": "assets/signs/tener.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/tener.mp4"
   },
   {
     "id": "hablar",
@@ -534,7 +577,8 @@
     "leccion": "vocabulario",
     "espanol": "Hablar",
     "sign": "assets/signs/hablar.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/hablar.mp4"
   },
   {
     "id": "necesitar",
@@ -542,7 +586,8 @@
     "leccion": "vocabulario",
     "espanol": "Necesitar",
     "sign": "assets/signs/necesitar.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/necesitar.mp4"
   },
   {
     "id": "gustar",
@@ -550,7 +595,8 @@
     "leccion": "vocabulario",
     "espanol": "Gustar",
     "sign": "assets/signs/gustar.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/gustar.mp4"
   },
   {
     "id": "ayudar",
@@ -558,7 +604,8 @@
     "leccion": "vocabulario",
     "espanol": "Ayudar",
     "sign": "assets/signs/ayudar.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/ayudar.mp4"
   },
   {
     "id": "entender",
@@ -566,7 +613,8 @@
     "leccion": "vocabulario",
     "espanol": "Entender",
     "sign": "assets/signs/entender.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/entender.mp4"
   },
   {
     "id": "aprender",
@@ -574,7 +622,8 @@
     "leccion": "vocabulario",
     "espanol": "Aprender",
     "sign": "assets/signs/aprender.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/aprender.mp4"
   },
   {
     "id": "explicar",
@@ -582,7 +631,8 @@
     "leccion": "vocabulario",
     "espanol": "Explicar",
     "sign": "assets/signs/explicar.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/explicar.mp4"
   },
   {
     "id": "preguntar",
@@ -590,7 +640,8 @@
     "leccion": "vocabulario",
     "espanol": "Preguntar",
     "sign": "assets/signs/preguntar.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/preguntar.mp4"
   },
   {
     "id": "por_favor",
@@ -606,6 +657,7 @@
     "leccion": "vocabulario",
     "espanol": "Gracias",
     "sign": "assets/signs/gracias.png",
-    "figure": null
+    "figure": null,
+    "signAnimated": "assets/signs/animated/gracias.mp4"
   }
 ]
