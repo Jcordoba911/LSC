@@ -270,15 +270,6 @@
     "figure": null
   },
   {
-    "id": "zapatos",
-    "tema": "prendas",
-    "leccion": 11,
-    "espanol": "zapatos",
-    "sign": "assets/signs/zapatos.png",
-    "signAnimated": "assets/signs/animated/zapatos.mp4",
-    "figure": null
-  },
-  {
     "id": "falda",
     "tema": "prendas",
     "leccion": 11,
