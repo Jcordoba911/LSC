@@ -1,10 +1,17 @@
 # LSC · Juego de Lengua de Señas Colombiana
 
-Juego web para aprender vocabulario de **Lengua de Señas Colombiana (LSC)**. Cada tema tiene
-una sección **Aprende** con tarjetas de vocabulario (seña, dibujo de apoyo y palabra en español);
-al completarla se desbloquea el juego del tema. El primer modo de juego es **seña a palabra**:
-se muestra una seña y hay que elegir la palabra correcta, con puntaje y vidas. El progreso se
-guarda en el navegador (`localStorage`).
+Juego web para aprender vocabulario de **Lengua de Señas Colombiana (LSC)**. En **Aprende** y
+**Jugar** se elige cómo ver las señas: imágenes o videos animados (con fallback a imágenes cuando
+una palabra no tiene video). Al completar **Aprende** se desbloquean los juegos del tema. **Seña a
+palabra** muestra una seña y pide elegir la palabra correcta, con puntaje y vidas. **Memoria** pide
+encontrar pares seña ↔ palabra; otorga 20 puntos por par y resta 2 por cada movimiento adicional
+respecto a los pares encontrados (mínimo 0). El progreso se guarda en el navegador (`localStorage`).
+
+### Modo "Memoria"
+
+Desde el menú principal (**Memoria: encuentra los pares**, ruta `#/memoria`) se elige un tema
+desbloqueado y el estilo de las señas. Cada partida muestra hasta seis pares y termina al encontrar
+todos; el récord se guarda por tema.
 
 ### Modo "Construye la frase"
 
@@ -50,7 +57,7 @@ public/
   data/words.json         Vocabulario
   data/sentences.json     Frases del modo "Construye la frase"
 src/
-  screens/          Menú, Aprende, Juego, Construye la frase, Resultados
+  screens/          Menú, Aprende, Juego, Memoria, Construye la frase, Resultados
   game/             Lógica de los modos de juego
   services/         Carga de vocabulario y progreso (localStorage)
   components/       Seña (<img>/<video>), lista de temas
