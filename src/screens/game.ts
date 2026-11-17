@@ -1,6 +1,6 @@
 import { createSignMedia } from '../components/signMedia';
 import { createStyleSelector } from '../components/styleSelector';
-import { createThemeList } from '../components/themeList';
+import { createPlayThemeList } from '../components/themeList';
 import { h } from '../dom';
 import { answer, createGame, currentRound, type GameState } from '../game/signToWord';
 import { navigate, type Screen } from '../router';
@@ -16,10 +16,11 @@ export const gameIndexScreen: Screen = async (root) => {
     h(
       'section',
       { class: 'screen' },
-      h('a', { class: 'back', href: '#/' }, '← Menú'),
-      h('h2', {}, 'Jugar: seña a palabra'),
+      h('a', { class: 'back', href: '#/modos' }, '← Modos de Juego'),
+      h('span', { class: 'eyebrow' }, 'Seña a palabra'),
+      h('h2', {}, 'Elige un tema'),
       h('p', { class: 'muted' }, 'Elige un tema y estilo, mira la seña y selecciona la palabra correcta.'),
-      createThemeList(themes),
+      createPlayThemeList(themes),
     ),
   );
 };

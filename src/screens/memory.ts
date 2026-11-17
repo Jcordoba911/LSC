@@ -16,7 +16,7 @@ export const memoryIndexScreen: Screen = async (root) => {
     h(
       'section',
       { class: 'screen' },
-      h('a', { class: 'back', href: '#/' }, '← Menú'),
+      h('a', { class: 'back', href: '#/modos' }, '← Modos de Juego'),
       h('h2', {}, 'Memoria: encuentra los pares'),
       h('p', { class: 'muted' }, 'Encuentra cada par formado por una seña y su palabra.'),
       h(

@@ -22,8 +22,9 @@ export const learnIndexScreen: Screen = async (root) => {
       'section',
       { class: 'screen' },
       h('a', { class: 'back', href: '#/' }, '← Menú'),
-      h('h2', {}, 'Aprende'),
-      h('p', { class: 'muted' }, 'Elige un tema, un estilo y revisa todas sus señas para desbloquear el juego.'),
+      h('span', { class: 'eyebrow' }, 'Aprendizaje libre · a tu ritmo'),
+      h('h2', {}, 'Explora las señas'),
+      h('p', { class: 'muted' }, 'Elige un tema y un estilo para repasar sus señas. Completar un tema desbloquea los modos de juego.'),
       createThemeList(themes),
     ),
   );

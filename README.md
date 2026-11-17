@@ -1,22 +1,34 @@
 # LSC · Juego de Lengua de Señas Colombiana
 
-Juego web para aprender vocabulario de **Lengua de Señas Colombiana (LSC)**. En **Aprende** y
-**Jugar** se elige cómo ver las señas: imágenes o videos animados (con fallback a imágenes cuando
-una palabra no tiene video). Al completar **Aprende** se desbloquean los juegos del tema. **Seña a
-palabra** muestra una seña y pide elegir la palabra correcta, con puntaje y vidas. **Memoria** pide
-encontrar pares seña ↔ palabra; otorga 20 puntos por par y resta 2 por cada movimiento adicional
-respecto a los pares encontrados (mínimo 0). El progreso se guarda en el navegador (`localStorage`).
+Plataforma web abierta para explorar y aprender vocabulario de **Lengua de Señas Colombiana (LSC)**.
+El diseño invita a descubrir señas a tu ritmo, con imágenes, videos y juegos; no hay prisa ni una
+secuencia obligatoria. Completar el repaso de un tema desbloquea sus juegos. El progreso se guarda
+en el navegador (`localStorage`).
 
-### Modo "Memoria"
+## Navegación y aprendizaje
 
-Desde el menú principal (**Memoria: encuentra los pares**, ruta `#/memoria`) se elige un tema
-desbloqueado y el estilo de las señas. Cada partida muestra hasta seis pares y termina al encontrar
-todos; el récord se guarda por tema.
+- **Aprendizaje** (`#/aprende`): elige un tema, revisa todas sus señas y escoge imágenes o videos.
+  Cuando una palabra no tiene video, se muestra su imagen.
+- **Modos de Juego** (`#/modos`): elige **Seña a palabra**, **Construye la frase** o
+  **Memoria: encuentra los pares**. Los juegos que usan vocabulario se desbloquean al completar el
+  repaso del tema correspondiente.
+- La barra de navegación global permite volver a Aprendizaje o al hub de juegos desde cualquier
+  pantalla.
 
-### Modo "Construye la frase"
+### Seña a palabra
 
-Desde el menú principal (**Construye la frase**, ruta `#/frases`) se elige un tema o "Todas las frases"
-y una variante:
+Muestra una seña y pide elegir la palabra correcta, con puntaje y vidas. El estilo de seña se puede
+seleccionar como imagen o video.
+
+### Memoria
+
+Encuentra pares seña ↔ palabra. Cada partida muestra hasta seis pares y termina al encontrarlos
+todos; otorga 20 puntos por par y resta 2 por cada movimiento adicional respecto a los pares
+encontrados (mínimo 0). El récord se conserva por tema.
+
+### Construye la frase
+
+Se elige un tema o "Todas las frases" y una variante:
 
 - **Ordenar palabras**: se reproducen en secuencia los videos/GIFs de las señas de una frase
   (con botón **↻ Repetir señas**) y debajo aparecen sus palabras desordenadas. Se tocan en el orden
@@ -28,7 +40,9 @@ y una variante:
 Puntaje: 10 puntos por palabra de la frase (la mitad si se acierta después de fallar). 3 vidas por
 partida. Solo participan las frases cuyas palabras tienen `signAnimated`.
 
-Hecho con [Vite](https://vite.dev) + TypeScript, sin frameworks.
+Hecho con [Vite](https://vite.dev) + TypeScript, sin frameworks. La interfaz es responsive, usa
+contrastes legibles, controles con foco visible y respeta la preferencia del sistema para reducir
+movimiento.
 
 ## Cómo ejecutar
 
@@ -57,10 +71,10 @@ public/
   data/words.json         Vocabulario
   data/sentences.json     Frases del modo "Construye la frase"
 src/
-  screens/          Menú, Aprende, Juego, Memoria, Construye la frase, Resultados
+  screens/          Inicio, Modos, Aprendizaje, juegos y Resultados
   game/             Lógica de los modos de juego
   services/         Carga de vocabulario y progreso (localStorage)
-  components/       Seña (<img>/<video>), lista de temas
+  components/       Seña (<img>/<video>), lista de temas y navegación compartida
   router.ts         Router por hash
 scripts/            Script de validación de contenido
 docs/               Plan e informe
