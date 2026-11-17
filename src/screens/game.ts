@@ -16,7 +16,7 @@ export const gameIndexScreen: Screen = async (root) => {
     h(
       'section',
       { class: 'screen' },
-      h('a', { class: 'back', href: '#/' }, '← Menú'),
+      h('a', { class: 'back', href: '#/modos' }, '← Modos de Juego'),
       h('span', { class: 'eyebrow' }, 'Seña a palabra'),
       h('h2', {}, 'Elige un tema'),
       h('p', { class: 'muted' }, 'Elige un tema y estilo, mira la seña y selecciona la palabra correcta.'),

@@ -11,6 +11,7 @@ import {
   type SentenceGameState,
   type Token,
 } from '../game/buildSentence';
+import { canPlaySentences } from '../game/sentenceAccess';
 import { navigate, type Screen } from '../router';
 import { progress } from '../services/progress';
 import { loadSentences, playableSentences, type PlayableSentence } from '../services/sentences';
@@ -33,18 +34,21 @@ async function loadPlayable(): Promise<PlayableSentence[]> {
 }
 
 export const sentenceIndexScreen: Screen = async (root) => {
-  const playable = await loadPlayable();
+  const [playable, words] = await Promise.all([loadPlayable(), loadWords()]);
   const temas = [...new Set(playable.map((p) => p.sentence.tema))];
   const groups = [ALL_THEMES, ...temas].map((tema) => ({
     tema,
     count: tema === ALL_THEMES ? playable.length : playable.filter((p) => p.sentence.tema === tema).length,
+    unlocked: canPlaySentences(tema, playable, words, (theme, wordIds) =>
+      progress.isLearned(theme, wordIds),
+    ),
   }));
 
   root.append(
     h(
       'section',
       { class: 'screen' },
-      h('a', { class: 'back', href: '#/' }, '← Menú'),
+      h('a', { class: 'back', href: '#/modos' }, '← Modos de Juego'),
       h('h2', {}, 'Construye la frase'),
       h(
         'p',
@@ -56,7 +60,7 @@ export const sentenceIndexScreen: Screen = async (root) => {
         : h(
             'ul',
             { class: 'theme-list' },
-            ...groups.map(({ tema, count }) => {
+            ...groups.map(({ tema, count, unlocked }) => {
               const best = (Object.keys(VARIANTS) as Variant[])
                 .map((v) => [v, progress.get(scoreKey(v, tema)).bestScore] as const)
                 .filter(([, score]) => score > 0)
@@ -69,13 +73,21 @@ export const sentenceIndexScreen: Screen = async (root) => {
                   'p',
                   { class: 'muted' },
                   `${count} ${count === 1 ? 'frase' : 'frases'}`,
-                  best.length ? ` · Mejor: ${best.join(', ')}` : '',
+                  !unlocked
+                    ? ' · 🔒 Completa Aprendizaje para desbloquear'
+                    : best.length
+                      ? ` · Mejor: ${best.join(', ')}`
+                      : '',
                 ),
                 h(
                   'div',
                   { class: 'actions' },
-                  h('a', { class: 'btn btn-primary', href: playHref(tema, 'ordenar') }, 'Ordenar'),
-                  h('a', { class: 'btn', href: playHref(tema, 'significado') }, 'Significado'),
+                  unlocked
+                    ? h('a', { class: 'btn btn-primary', href: playHref(tema, 'ordenar') }, 'Ordenar')
+                    : h('button', { class: 'btn', disabled: true }, '🔒 Ordenar'),
+                  unlocked
+                    ? h('a', { class: 'btn', href: playHref(tema, 'significado') }, 'Significado')
+                    : h('button', { class: 'btn', disabled: true }, '🔒 Significado'),
                 ),
               );
             }),
@@ -88,7 +100,39 @@ export const sentenceGameScreen: Screen = async (root, { tema, variante }) => {
   const variant: Variant = variante === 'significado' ? 'significado' : 'ordenar';
   if (variante && variante !== variant) return navigate(playHref(tema, variant).slice(1));
 
-  let state: SentenceGameState = createSentenceGame(tema, await loadPlayable());
+  const [playable, words] = await Promise.all([loadPlayable(), loadWords()]);
+  if (tema !== ALL_THEMES && !playable.some((item) => item.sentence.tema === tema)) {
+    return navigate('/frases');
+  }
+  if (!canPlaySentences(tema, playable, words, (theme, wordIds) =>
+    progress.isLearned(theme, wordIds),
+  )) {
+    root.append(
+      h(
+        'section',
+        { class: 'screen center' },
+        h('h2', {}, '🔒 Modo bloqueado'),
+        h(
+          'p',
+          {},
+          tema === ALL_THEMES
+            ? 'Completa Aprendizaje de todos los temas de frases para practicar todas juntas.'
+            : `Completa Aprendizaje de ${themeLabel(tema)} para desbloquear sus frases.`,
+        ),
+        h(
+          'a',
+          {
+            class: 'btn btn-primary',
+            href: tema === ALL_THEMES ? '#/aprende' : `#/aprende/${encodeURIComponent(tema)}`,
+          },
+          'Ir a Aprendizaje',
+        ),
+      ),
+    );
+    return;
+  }
+
+  let state: SentenceGameState = createSentenceGame(tema, playable);
   if (state.rounds.length === 0) return navigate('/frases');
 
   const hud = h('div', { class: 'hud' });
