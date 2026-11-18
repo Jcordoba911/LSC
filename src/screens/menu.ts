@@ -20,12 +20,6 @@ export const menuScreen: Screen = (root) => {
             { class: 'subtitle' },
             'Descubre la LSC jugando, mirando y explorando a tu manera. Un espacio abierto para aprender juntos, sin afán.',
           ),
-          h(
-            'div',
-            { class: 'hero-actions' },
-            h('a', { class: 'btn btn-primary btn-lg', href: '#/aprende' }, 'Empezar a explorar →'),
-            h('a', { class: 'btn btn-quiet btn-lg', href: '#/modos' }, 'Conocer los juegos'),
-          ),
           h('p', { class: 'hero-note' }, '✨ Gratis · a tu ritmo · con imágenes y videos'),
         ),
         h(

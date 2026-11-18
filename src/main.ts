@@ -15,7 +15,6 @@ createRouter(root, {
   '/modos': modesScreen,
   '/aprende': learnIndexScreen,
   '/aprende/:tema': learnThemeScreen,
-  '/aprende/:tema/:estilo': learnThemeScreen,
   '/jugar': gameIndexScreen,
   '/jugar/:tema': gameScreen,
   '/jugar/:tema/:estilo': gameScreen,
