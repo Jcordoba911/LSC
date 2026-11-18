@@ -1,6 +1,6 @@
 import { h } from '../dom';
 
-type StyleRoute = 'aprende' | 'jugar';
+type StyleRoute = 'jugar';
 
 export function createStyleSelector(route: StyleRoute, tema: string, videoCount: number): HTMLElement {
   const base = `#/${route}/${encodeURIComponent(tema)}`;
