@@ -7,8 +7,9 @@ en el navegador (`localStorage`).
 
 ## Navegación y aprendizaje
 
-- **Aprendizaje** (`#/aprende`): elige un tema, revisa todas sus señas y escoge imágenes o videos.
-  Cuando una palabra no tiene video, se muestra su imagen.
+- **Aprendizaje** (`#/aprende`): elige un tema y revisa sus señas. Cada palabra comienza con imagen;
+  puedes alternar a video dentro de la pantalla cuando haya uno disponible.
+  Cuando una palabra no tiene video, se muestra su imagen y el cambio a video queda deshabilitado.
 - **Modos de Juego** (`#/modos`): elige **Seña a palabra**, **Construye la frase** o
   **Memoria: encuentra los pares**. Los juegos que usan vocabulario se desbloquean al completar el
   repaso del tema correspondiente.

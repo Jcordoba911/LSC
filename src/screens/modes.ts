@@ -43,12 +43,11 @@ export const modesScreen: Screen = (root) => {
         { class: 'mode-grid' },
         ...modes.map(({ icon, title, description, href, className }) =>
           h(
-            'article',
-            { class: `mode-card ${className}` },
+            'a',
+            { class: `mode-card ${className}`, href },
             h('span', { class: 'mode-icon', 'aria-hidden': 'true' }, icon),
             h('h2', {}, title),
             h('p', {}, description),
-            h('a', { class: 'btn btn-lg', href }, 'Explorar temas →'),
           ),
         ),
       ),

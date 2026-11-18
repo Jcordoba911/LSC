@@ -49,10 +49,11 @@ REPO: `Jcordoba911/LSC`, juego web educativo de Lengua de Señas Colombiana.
 
 - El tipo es `SignStyle = 'imagen' | 'video'`.
 - `signFor(word, estilo)` devuelve `word.signAnimated` cuando el estilo es `video` y existe video; en cualquier otro caso devuelve `word.sign`.
-- En Aprende y Jugar, las rutas sin estilo deben mostrar un selector antes del contenido:
-  - `#/aprende/<tema>/imagen` y `#/aprende/<tema>/video`
+- Aprende abre cada tema en `#/aprende/<tema>` con imágenes por defecto y permite alternar a video
+  dentro de la pantalla para cada palabra que tenga `signAnimated`.
+- Jugar mantiene el selector de estilo en las rutas:
   - `#/jugar/<tema>/imagen` y `#/jugar/<tema>/video`
-- Mostrar cuántas palabras del tema tienen video. Si ninguna tiene, ofrecer solo Imágenes.
+- Mostrar cuántas palabras del tema tienen video en el selector de Jugar. Si ninguna tiene, ofrecer solo Imágenes.
 - `createSignMedia()` aplica `assetUrl()` internamente: llamarlo con `signFor(word, estilo)` directamente.
 - El progreso de Aprende se conserva por tema, sin separar claves por estilo.
 - Jugar mantiene el bloqueo según `progress.isLearned(tema, wordIds)` y el puntaje general por tema con `progress.saveScore(tema, score)`.
@@ -63,13 +64,13 @@ REPO: `Jcordoba911/LSC`, juego web educativo de Lengua de Señas Colombiana.
 Registrar en `src/main.ts`:
 
 - `/modos` → `modesScreen`
-- `/aprende/:tema/:estilo` → `learnThemeScreen`
+- `/aprende/:tema` → `learnThemeScreen`
 - `/jugar/:tema/:estilo` → `gameScreen`
 - `/memoria` → `memoryIndexScreen`
 - `/memoria/:tema` → `memoryScreen`
 - `/memoria/:tema/:estilo` → `memoryScreen`
 
-Mantener también las rutas existentes sin `:estilo`, que muestran el selector cuando aplica.
+Aprendizaje usa imágenes por defecto y alterna el video dentro de cada tema; Jugar conserva su selector de estilo.
 
 La portada ofrece únicamente **Aprendizaje** (`#/aprende`) y **Modos de Juego** (`#/modos`).
 El hub de modos enlaza a `#/jugar`, `#/frases` y `#/memoria`. Los índices de Jugar, frases y
@@ -127,8 +128,9 @@ Agregar `src/game/memory.test.ts` con pruebas Vitest para cantidad de cartas, pa
 - Mantener una identidad visual alegre, inclusiva y accesible en todas las rutas: fondos claros,
   acentos cálidos y vivos (amarillo, coral, naranja, turquesa y azul), tarjetas redondeadas,
   sombras suaves, iconografía coherente y animaciones sutiles.
-- La portada tiene un hero motivador con un CTA a Aprendizaje y acceso secundario a Modos; usar
-  recursos visuales relacionados con manos, señas y comunicación. El hub presenta los tres modos.
+- La portada tiene un hero motivador y una sola tarjeta para cada destino: Aprendizaje y Modos de
+  Juego. Usar recursos visuales relacionados con manos, señas y comunicación. El hub presenta los
+  tres modos como tarjetas enlazables.
 - Mantener navegación global accesible, diseño responsive, contraste y foco visible; respetar
   `prefers-reduced-motion`. Evitar un tono de curso obligatorio o una estética corporativa fría.
 
