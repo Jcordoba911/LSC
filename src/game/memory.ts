@@ -33,8 +33,8 @@ export interface FlipResult {
 
 export const DIFFICULTIES = {
   facil: 10,
-  medio: 20,
-  dificil: 30,
+  medio: 15,
+  dificil: 20,
 } as const;
 
 export type MemoryDifficulty = keyof typeof DIFFICULTIES;
