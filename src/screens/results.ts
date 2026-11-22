@@ -31,7 +31,7 @@ export const resultsScreen: Screen = (root) => {
       { class: 'screen center results' },
       h('h2', {}, won ? '¡Muy bien!' : 'Sin vidas'),
       h('p', { class: 'muted' }, last.label ?? themeLabel(result.tema)),
-      h('p', { class: 'big-score' }, String(result.score)),
+      h('p', { class: 'big-score' }, `${result.score} / 100`),
       h('p', {}, `Aciertos: ${result.correct} de ${result.total}`),
       isRecord ? h('p', { class: 'record' }, '¡Nuevo récord!') : null,
       h(

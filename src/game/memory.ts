@@ -39,12 +39,9 @@ export const DIFFICULTIES = {
 
 export type MemoryDifficulty = keyof typeof DIFFICULTIES;
 
-const POINTS_PER_PAIR = 20;
-const EXTRA_MOVE_PENALTY = 2;
-
-/** Puntaje: 20 puntos por par, menos 2 por cada movimiento sobre los pares encontrados. */
+/** Puntaje: pares encontrados por movimiento, como porcentaje de eficiencia, hasta 100. */
 function scoreFor(matched: number, moves: number): number {
-  return Math.max(0, matched * POINTS_PER_PAIR - Math.max(0, moves - matched) * EXTRA_MOVE_PENALTY);
+  return Math.min(100, Math.round((matched / Math.max(moves, 1)) * 100));
 }
 
 export function createMemoryGame(
