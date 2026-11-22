@@ -19,6 +19,7 @@ export interface SentenceGameState {
   rounds: SentenceRound[];
   index: number;
   score: number;
+  earned: number;
   lives: number;
   correct: number;
   /** Intentos fallidos en la ronda actual. */
@@ -82,6 +83,7 @@ export function createSentenceGame(
     rounds,
     index: 0,
     score: 0,
+    earned: 0,
     lives,
     correct: 0,
     misses: 0,
@@ -108,6 +110,11 @@ function advance(state: SentenceGameState, patch: Partial<SentenceGameState>): S
   return { ...state, ...patch, index, misses: 0, finished: index >= state.rounds.length };
 }
 
+/** Normaliza lo ganado frente al máximo de puntos posibles en todas las rondas. */
+function maximumScore(state: SentenceGameState): number {
+  return state.pointsPerWord * state.rounds.reduce((total, round) => total + round.words.length, 0);
+}
+
 /**
  * Registra un intento. Acierto: suma puntos (la mitad si hubo fallos) y pasa a
  * la siguiente frase. Error: quita una vida y se queda en la misma frase para
@@ -122,7 +129,13 @@ export function submitSentence(
   if (isCorrect) {
     const full = state.pointsPerWord * round.words.length;
     const points = state.misses > 0 ? Math.ceil(full / 2) : full;
-    return { isCorrect, state: advance(state, { score: state.score + points, correct: state.correct + 1 }) };
+    const earned = state.earned + points;
+    const maxScore = maximumScore(state);
+    const score = maxScore === 0 ? 0 : Math.round((earned / maxScore) * 100);
+    return {
+      isCorrect,
+      state: advance(state, { earned, score, correct: state.correct + 1 }),
+    };
   }
   const lives = state.lives - 1;
   return { isCorrect, state: { ...state, lives, misses: state.misses + 1, finished: lives <= 0 } };

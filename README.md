@@ -23,9 +23,10 @@ seleccionar como imagen o video.
 
 ### Memoria
 
-Encuentra pares seña ↔ palabra. Cada partida muestra hasta seis pares y termina al encontrarlos
-todos; otorga 20 puntos por par y resta 2 por cada movimiento adicional respecto a los pares
-encontrados (mínimo 0). El récord se conserva por tema.
+Encuentra pares seña ↔ palabra. Elige Fácil (10 pares), Medio (15) o Difícil (20); una partida
+termina al encontrar todos los pares. La valoración es la eficiencia de pares encontrados por
+movimiento, como porcentaje de 0 a 100; una partida perfecta obtiene 100. El récord se conserva
+por dificultad.
 
 ### Construye la frase
 
@@ -38,8 +39,12 @@ Se elige un tema o "Todas las frases" y una variante:
   **Reintentar** o **Saltar frase**.
 - **Elegir el significado**: misma secuencia de señas, pero se elige la frase completa entre opciones.
 
-Puntaje: 10 puntos por palabra de la frase (la mitad si se acierta después de fallar). 3 vidas por
-partida. Solo participan las frases cuyas palabras tienen `signAnimated`.
+La valoración final de cada modo se normaliza de 0 a 100 y se muestra sobre 100 en resultados.
+Seña a palabra calcula aciertos sobre rondas; Construye la frase calcula puntos ganados sobre el
+máximo posible en todas las frases (la mitad de puntos para una frase acertada tras fallar).
+En Memoria, la valoración es pares encontrados sobre movimientos, como porcentaje de eficiencia.
+Los récords anteriores de la escala antigua no se migran. Se mantienen 3 vidas por partida.
+Solo participan las frases cuyas palabras tienen `signAnimated`.
 
 Hecho con [Vite](https://vite.dev) + TypeScript, sin frameworks. La interfaz es responsive, usa
 contrastes legibles, controles con foco visible y respeta la preferencia del sistema para reducir

@@ -87,10 +87,10 @@ describe('checkOrder', () => {
 });
 
 describe('submitSentence', () => {
-  it('suma 10 puntos por palabra y avanza al acertar', () => {
+  it('normaliza puntos ganados contra el máximo de todas las palabras', () => {
     let game = createSentenceGame(ALL_THEMES, playable);
     ({ state: game } = submitSentence(game, true));
-    expect(game).toMatchObject({ score: 20, correct: 1, index: 1, lives: 3 });
+    expect(game).toMatchObject({ earned: 20, score: 33, correct: 1, index: 1, lives: 3 });
   });
 
   it('al fallar quita una vida y permite reintentar con la mitad de puntos', () => {
@@ -100,7 +100,7 @@ describe('submitSentence', () => {
     expect(game).toMatchObject({ lives: 2, index: 0, misses: 1, finished: false });
     expect(currentSentence(game)).toBe(first);
     ({ state: game } = submitSentence(game, true));
-    expect(game).toMatchObject({ score: 10, index: 1, misses: 0 });
+    expect(game).toMatchObject({ earned: 10, score: 17, index: 1, misses: 0 });
   });
 
   it('termina al quedarse sin vidas o al completar las frases', () => {
@@ -112,6 +112,12 @@ describe('submitSentence', () => {
     game = createSentenceGame(ALL_THEMES, playable);
     game = skipSentence(game);
     while (!game.finished) ({ state: game } = submitSentence(game, true));
-    expect(game).toMatchObject({ correct: 2, score: 40 });
+    expect(game).toMatchObject({ correct: 2, earned: 40, score: 67 });
+  });
+
+  it('awards 100 for a perfect run', () => {
+    let game = createSentenceGame(ALL_THEMES, playable);
+    while (!game.finished) ({ state: game } = submitSentence(game, true));
+    expect(game).toMatchObject({ correct: 3, score: 100 });
   });
 });
