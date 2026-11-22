@@ -43,7 +43,7 @@ describe('answer', () => {
     let game = createGame('animales', words, { lives: 2 });
     const first = currentRound(game)!;
     ({ state: game } = answer(game, first.word.espanol));
-    expect(game.score).toBe(10);
+    expect(game.score).toBe(33);
     expect(game.lives).toBe(2);
 
     const second = currentRound(game)!;
@@ -61,16 +61,10 @@ describe('answer', () => {
     expect(currentRound(game)).toBeUndefined();
   });
 
-  it('usa los puntos por acierto configurados', () => {
-    let game = createGame('animales', words, { pointsPerHit: 25 });
-    ({ state: game } = answer(game, currentRound(game)!.word.espanol));
-    expect(game.score).toBe(25);
-  });
-
-  it('termina al completar todas las rondas', () => {
+  it('normaliza el resultado a 100 tras acertar todas las rondas', () => {
     let game = createGame('animales', words);
     while (!game.finished) ({ state: game } = answer(game, currentRound(game)!.word.espanol));
     expect(game.correct).toBe(3);
-    expect(game.score).toBe(30);
+    expect(game.score).toBe(100);
   });
 });

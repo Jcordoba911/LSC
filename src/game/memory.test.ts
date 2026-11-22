@@ -26,6 +26,7 @@ function seededRandom(seed: number): () => number {
 
 describe('createMemoryGame', () => {
   it('uses the whole vocabulary pool and creates the configured number of pairs', () => {
+    expect(DIFFICULTIES).toEqual({ facil: 10, medio: 15, dificil: 20 });
     for (const pairCount of Object.values(DIFFICULTIES)) {
       const game = createMemoryGame(words, { pairs: pairCount, rng: seededRandom(42) });
       expect(game.cards).toHaveLength(pairCount * 2);
@@ -90,7 +91,7 @@ describe('flip', () => {
     expect(first.matched).toBeNull();
     const second = flip(first.state, textIndex);
     expect(second.matched).toBe(true);
-    expect(second.state).toMatchObject({ moves: 1, matched: [firstCard.wordId], score: 20 });
+    expect(second.state).toMatchObject({ moves: 1, matched: [firstCard.wordId], score: 100 });
     expect(second.state.finished).toBe(false);
     expect(flip(second.state, signIndex).state).toBe(second.state);
   });
@@ -119,7 +120,24 @@ describe('flip', () => {
       const index = game.cards.findIndex((card) => card.kind === kind);
       game = flip(game, index).state;
     }
-    expect(game).toMatchObject({ finished: true, matched: [wordId], moves: 1, score: 20 });
+    expect(game).toMatchObject({ finished: true, matched: [wordId], moves: 1, score: 100 });
     expect(flip(game, 0).state).toBe(game);
+  });
+
+  it('scores matching efficiency as a percentage of moves', () => {
+    let game = createMemoryGame(words, { pairs: 2, rng: seededRandom(14) });
+    const first = game.cards[0];
+    const otherWordIndex = game.cards.findIndex((card) => card.wordId !== first.wordId);
+    game = flip(game, 0).state;
+    game = flip(game, otherWordIndex).state;
+    game = unflip(game);
+
+    const partnerIndex = game.cards.findIndex(
+      (card, index) => index !== 0 && card.wordId === first.wordId && card.kind !== first.kind,
+    );
+    game = flip(game, 0).state;
+    game = flip(game, partnerIndex).state;
+
+    expect(game).toMatchObject({ moves: 2, matched: [first.wordId], score: 50 });
   });
 });
