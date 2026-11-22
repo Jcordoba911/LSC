@@ -610,5 +610,176 @@
     "sign": "assets/signs/gracias.png",
     "figure": null,
     "signAnimated": "assets/signs/animated/gracias.mp4"
+  },
+  {
+    "id": "familia",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Familia",
+    "sign": "assets/signs/familia.png",
+    "signAnimated": "assets/signs/animated/familia.mp4",
+    "figure": null
+  },
+  {
+    "id": "mama",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Mamá",
+    "sign": "assets/signs/mama.png",
+    "signAnimated": "assets/signs/animated/mama.mp4",
+    "figure": null
+  },
+  {
+    "id": "papa",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Papá",
+    "sign": "assets/signs/papa.png",
+    "signAnimated": "assets/signs/animated/papa.mp4",
+    "figure": null
+  },
+  {
+    "id": "hijo",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Hijo",
+    "sign": "assets/signs/hijo.png",
+    "signAnimated": "assets/signs/animated/hijo.mp4",
+    "figure": null
+  },
+  {
+    "id": "hermano",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Hermano",
+    "sign": "assets/signs/hermano.png",
+    "signAnimated": "assets/signs/animated/hermano.mp4",
+    "figure": null
+  },
+  {
+    "id": "abuelo",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Abuelo",
+    "sign": "assets/signs/abuelo.png",
+    "signAnimated": "assets/signs/animated/abuelo.mp4",
+    "figure": null
+  },
+  {
+    "id": "nieto",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Nieto",
+    "sign": "assets/signs/nieto.png",
+    "signAnimated": "assets/signs/animated/nieto.mp4",
+    "figure": null
+  },
+  {
+    "id": "tio",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Tío",
+    "sign": "assets/signs/tio.png",
+    "signAnimated": "assets/signs/animated/tio.mp4",
+    "figure": null
+  },
+  {
+    "id": "primo",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Primo",
+    "sign": "assets/signs/primo.png",
+    "signAnimated": "assets/signs/animated/primo.mp4",
+    "figure": null
+  },
+  {
+    "id": "sobrino",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Sobrino",
+    "sign": "assets/signs/sobrino.png",
+    "signAnimated": "assets/signs/animated/sobrino.mp4",
+    "figure": null
+  },
+  {
+    "id": "suegro",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Suegro",
+    "sign": "assets/signs/suegro.png",
+    "signAnimated": "assets/signs/animated/suegro.mp4",
+    "figure": null
+  },
+  {
+    "id": "yerno",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Yerno",
+    "sign": "assets/signs/yerno.png",
+    "signAnimated": "assets/signs/animated/yerno.mp4",
+    "figure": null
+  },
+  {
+    "id": "nuera",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Nuera",
+    "sign": "assets/signs/nuera.png",
+    "signAnimated": "assets/signs/animated/nuera.mp4",
+    "figure": null
+  },
+  {
+    "id": "cunado",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Cuñado",
+    "sign": "assets/signs/cunado.png",
+    "signAnimated": "assets/signs/animated/cunado.mp4",
+    "figure": null
+  },
+  {
+    "id": "esposo",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Esposo",
+    "sign": "assets/signs/esposo.png",
+    "signAnimated": "assets/signs/animated/esposo.mp4",
+    "figure": null
+  },
+  {
+    "id": "novio",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Novio",
+    "sign": "assets/signs/novio.png",
+    "signAnimated": "assets/signs/animated/novio.mp4",
+    "figure": null
+  },
+  {
+    "id": "padrino",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Padrino",
+    "sign": "assets/signs/padrino.png",
+    "signAnimated": "assets/signs/animated/padrino.mp4",
+    "figure": null
+  },
+  {
+    "id": "bebe",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Bebé",
+    "sign": "assets/signs/bebe.png",
+    "signAnimated": "assets/signs/animated/bebe.mp4",
+    "figure": null
+  },
+  {
+    "id": "matrimonio",
+    "tema": "familia",
+    "leccion": "vocabulario 2",
+    "espanol": "Matrimonio",
+    "sign": "assets/signs/matrimonio.png",
+    "signAnimated": "assets/signs/animated/matrimonio.mp4",
+    "figure": null
   }
 ]
