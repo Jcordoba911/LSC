@@ -90,5 +90,25 @@
       "negro"
     ],
     "frase": "La camisa y el pantalón son negros"
+  },
+  {
+    "id": "s11",
+    "tema": "familia",
+    "leccion": 12,
+    "palabras": [
+      "mama",
+      "papa"
+    ],
+    "frase": "Mamá y papá"
+  },
+  {
+    "id": "s12",
+    "tema": "familia",
+    "leccion": 12,
+    "palabras": [
+      "abuelo",
+      "nieto"
+    ],
+    "frase": "Abuelo y nieto"
   }
 ]
